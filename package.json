@@ -1,0 +1,27 @@
+{
+  "name": "pierry-landing-page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierry-savio/pierry-landing-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pierry-savio/pierry-landing-page/issues"
+  },
+  "homepage": "https://github.com/pierry-savio/pierry-landing-page#readme",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.103.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2"
+  }
+}
