@@ -9,8 +9,8 @@ header{
     border-bottom: 2px solid variables.$c-header-line;
 
     p{
-        color: white;
-        font-size: 20px;
+        color: variables.$c-header;
+        font-size: variables.$fs-mobile-header;
 
         span.text-highlight{
             &:first-of-type {
@@ -22,7 +22,58 @@ header{
         aspect-ratio: 1 / 1;
         width: 30px;
     }
-    p,img{
+    p, img{
         cursor: pointer;
+    }
+
+    img{
+        transform: scale(1) rotate(0deg);
+        transition: 0.2s ease;
+        
+        &:active{
+            transform: scale(0.9) rotate(0deg);
+        }
+    }
+    img.opened{
+        transform: rotate(90deg) scale(1);
+
+        &:active{
+            transform: scale(0.9) rotate(90deg);
+        }
+    }
+
+    ul.ul-mobile{
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: variables.$c-mobile-aside-background;
+        padding: 20px 40px 40px 40px;
+        z-index: -1;
+        transition: 1s ease;
+        
+        a{
+            
+            li{
+                color: variables.$c-paragraph;
+                border-bottom: 1px solid transparent;
+                padding: 12px 10px 8px 10px;
+                transition: 0.2s ease;
+            }
+
+            &:hover{
+                li{
+                    color: variables.$c-title;
+                    border-bottom: 1px solid variables.$c-border;
+                }
+            }
+            
+        }
+    }
+
+    ul.ul-mobile.closed{
+        position: fixed;
+        top: -370px;
+        left: 0;
     }
 }
