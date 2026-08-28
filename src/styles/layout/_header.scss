@@ -1,0 +1,28 @@
+@use '../abstracts/variables' as variables;
+
+header{
+    background-color: variables.$c-header-background;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: variables.$pad-header variables.$pad-header+10px variables.$pad-header variables.$pad-header+10px;
+    border-bottom: 2px solid variables.$c-header-line;
+
+    p{
+        color: white;
+        font-size: 20px;
+
+        span.text-highlight{
+            &:first-of-type {
+                margin-right: 10px;
+            }
+        }
+    }
+    img{
+        aspect-ratio: 1 / 1;
+        width: 30px;
+    }
+    p,img{
+        cursor: pointer;
+    }
+}
