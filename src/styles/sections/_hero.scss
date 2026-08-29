@@ -1,6 +1,18 @@
 @use '../abstracts/variables' as variables;
 
 section.hero {
-    min-height: 100vh;
     background: variables.$c-header-background;
+
+    div.hero-content {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        padding: 80px;
+
+        h1 {
+            color: white;
+            font-size: 60px;
+        }
+    }
 }
