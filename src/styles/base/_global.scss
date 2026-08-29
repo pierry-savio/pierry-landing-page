@@ -1,6 +1,10 @@
 @use '../abstracts/variables' as variables;
 
-span.text-highlight{
+html {
+    scroll-behavior: smooth;
+}
+
+span.text-highlight {
     color: variables.$c-text-highlight;
     font-weight: 800;
 }

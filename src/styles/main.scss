@@ -1,8 +1,5 @@
 @use 'sections/index' as *;
 @use 'layout/index' as *;
 @use 'base/index' as *;
-
-body {
-    min-height: 100vh;
-    background-color: rgb(30, 30, 30);
-}
+@use './abstracts/variables' as variables;
+@use './components/index' as *;

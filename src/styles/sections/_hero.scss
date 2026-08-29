@@ -1,0 +1,6 @@
+@use '../abstracts/variables' as variables;
+
+section.hero {
+    min-height: 100vh;
+    background: variables.$c-header-background;
+}
