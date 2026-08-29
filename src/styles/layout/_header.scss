@@ -31,6 +31,9 @@ header {
         gap: 40px;
 
         a {
+            position: relative;
+            display: inline-block;
+
             li {
                 color: variables.$c-paragraph;
                 transition: 0.3s ease;
@@ -38,6 +41,26 @@ header {
                 &:hover {
                     color: variables.$c-text-highlight;
                 }
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+
+                width: 100%;
+                height: 2px;
+                background: variables.$c-text-highlight;
+                border-radius: 50px;
+
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 0.3s ease;
+            }
+
+            &:hover::after {
+                transform: scaleX(1);
             }
         }
     }
