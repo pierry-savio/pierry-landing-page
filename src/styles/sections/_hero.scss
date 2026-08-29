@@ -2,17 +2,49 @@
 
 section.hero {
     background: variables.$c-header-background;
+    padding: 60px 20px 0px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     div.hero-content {
-        min-height: 100vh;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        place-items: center;
-        padding: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
 
-        h1 {
-            color: white;
-            font-size: 60px;
+        img {
+            width: 20px;
         }
     }
 }
+
+/*
+
+<div class="section-title-container">
+    <p class="section-badge">Seu site pronto em até 7 dias</p>
+    <h1 class="section-title">Seu site pronto, rápido e totalmente profissional</h1>
+    <p class="section-paragraph">Atraia mais clientes e venda mais com um site que funciona 24h por dia.</p>
+</div>
+
+<div class="buttons-container">
+    <a href="" class="button-contact">
+    <img src="./src/assets/images/icons/chat-icon.png" alt="Ícone chat"> Chamar no WhatsApp
+    </a>
+    <a href="" class="button-portfolio">Ver Portfólio</a>
+</div>
+
+<div class="stats-container">
+    <div class="stars-container">
+    <img src="./src/assets/images/icons/star-icon.png" alt="Estrela">
+    <img src="./src/assets/images/icons/star-icon.png" alt="Estrela">
+    <img src="./src/assets/images/icons/star-icon.png" alt="Estrela">
+    <img src="./src/assets/images/icons/star-icon.png" alt="Estrela">
+    <img src="./src/assets/images/icons/star-icon.png" alt="Estrela">
+    </div>
+    <p>+10 sites entregues de forma rápida e segura</p>
+</div>
+
+*/
