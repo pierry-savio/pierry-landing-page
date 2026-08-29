@@ -2,10 +2,10 @@
 @use '../components/button' as button;
 
 header {
-    background-color: variables.$c-header-background;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: variables.$c-header-background;
     padding: variables.$pad-header variables.$pad-header+10px variables.$pad-header variables.$pad-header+10px;
     border-bottom: 2px solid variables.$c-header-line;
     position: fixed;
@@ -80,27 +80,48 @@ header {
 
 ul.ul-mobile {
     width: 100%;
+    transform: translateY(60px);
     background-color: variables.$c-mobile-aside-background;
     padding: 20px 25px 20px 25px;
     z-index: -1;
     transition: 0.5s ease;
 
     a {
+        position: relative;
+        display: flex;
 
         li {
             color: variables.$c-paragraph;
             border-bottom: 1px solid transparent;
             padding: 12px 10px 8px 10px;
-            transition: 0.2s ease;
+            transition: 0.3s ease;
         }
 
-        &:hover {
-            li {
-                color: variables.$c-title;
-                border-bottom: 1px solid variables.$c-border;
-            }
+        &::after {
+            content: "";
+            position: absolute;
+            opacity: 0;
+            left: 0px;
+            right: 0px;
+            bottom: 0;
+            height: 2px;
+            background: variables.$c-header-line;
+            border-radius: 50px;
+
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: 0.35s ease;
         }
 
+        &:hover::after {
+            transform: scaleX(1);
+            opacity: 1;
+        }
+
+        &:hover li {
+            color: variables.$c-title;
+            transform: scale(1.1);
+        }
     }
 }
 
