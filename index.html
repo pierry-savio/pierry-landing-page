@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+    rel="stylesheet">
 
 </head>
 
@@ -19,21 +21,13 @@
   <header>
     <a href="#hero">
       <p>
-        <span class="text-highlight">&lt;/&gt</span> 
+        <span class="text-highlight">&lt;/&gt</span>
         Pierry<span class="text-highlight">.dev</span>
       </p>
     </a>
 
-    <ul class="ul-mobile" id="ul_mobile">
-
-      <a href="#hero">
-        <li>Início</li>
-      </a>
-
-      <a href="#statistics">
-        <li>Statísticas</li>
-      </a>
-
+    <!-- UL DESKTOP -->
+    <ul class="ul-desktop closed" id="ul_desktop">
       <a href="#services">
         <li>Serviços</li>
       </a>
@@ -54,21 +48,56 @@
         <li>Orçamento</li>
       </a>
 
-      <a href="#faq">
-        <li>Dúvidas</li>
-      </a>
-
       <a href="#cta">
         <li>Contato</li>
       </a>
-
     </ul>
 
-    <img src="./src/assets/images/icons/menu-icon.png" alt="Botão menu" id="menu_icon" class="opened">
+    <a href="#contact" class="contact-button">
+      <button><img src="./src/assets/images/icons/chat-icon.png" alt="Ícone chat"> Chamar no WhatsApp</button>
+    </a>
+
+    <img src="./src/assets/images/icons/menu-icon.png" alt="Botão menu" id="menu_icon" class="menu-icon opened">
   </header>
+
+  <!-- UL MOBILE -->
+  <ul class="ul-mobile closed" id="ul_mobile">
+    <a href="#hero">
+      <li>Início</li>
+    </a>
+
+    <a href="#services">
+      <li>Serviços</li>
+    </a>
+
+    <a href="#process_steps">
+      <li>Como funciona</li>
+    </a>
+
+    <a href="#portfolio">
+      <li>Portfólio</li>
+    </a>
+
+    <a href="#testimonials">
+      <li>Depoimentos</li>
+    </a>
+
+    <a href="#pricing">
+      <li>Orçamento</li>
+    </a>
+
+    <a href="#faq">
+      <li>Dúvidas</li>
+    </a>
+
+    <a href="#cta">
+      <li>Contato</li>
+    </a>
+  </ul>
 
   <script type="module" src="/src/scripts/main.ts"></script>
   <script type="module" src="/src/scripts/aside_menu.ts"></script>
 
 </body>
+
 </html>

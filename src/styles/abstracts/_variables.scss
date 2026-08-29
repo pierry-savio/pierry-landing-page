@@ -1,56 +1,60 @@
 /* ==== COLORS ==== */
 
-    /* Texts */
-        $c-title:                  #F1F1F6;
-        $c-paragraph:              #94A3B8;
-        $c-header:                 #F1F1F6;
-        $c-text-highlight:         #8B5CF6;
-        $c-status-highlight:       #A855F7;
-        $c-badge-text:             #A855F7;
-        $c-project-cta-text:       #A855F7;
+/* Texts */
+$c-title: #F1F1F6;
+$c-paragraph: #94A3B8;
+$c-header: #F1F1F6;
+$c-text-highlight: #8B5CF6;
+$c-status-highlight: #A855F7;
+$c-badge-text: #A855F7;
+$c-project-cta-text: #A855F7;
 
-    /* Backgrounds */
-        $c-badge-background:       #1E1B4B;
-        $c-header-background:      #08080C;
+/* Backgrounds */
+$c-badge-background: #1E1B4B;
+$c-header-background: #08080C;
 
-    /* Buttons */
-        $c-button-text:            #F1F1F6;
-        $c-button-main-background: #8B5CF6;
-        $c-whatsapp-background:    #25D366;
+/* Buttons */
+$c-button-text: #F1F1F6;
+$c-button-main-background: #8B5CF6;
+$c-button-main-boxshadow: #8B5CF6;
+$c-whatsapp-background: #25D366;
 
-    /* Borders */
-        $c-border:                 #2E2A45;
-        $c-icon-border:            #8B5CF6;
+/* Borders */
+$c-border: #2E2A45;
+$c-icon-border: #8B5CF6;
 
-    /* Layout */
-        $c-section-background-1:   #08080C;
-        $c-section-background-2:   #11111A;
-        $c-mobile-aside-background:   #11111A;
-        $c-header-line:            #1E1B4B;
+/* Layout */
+$c-section-background-1: #08080C;
+$c-section-background-2: #11111A;
+$c-mobile-aside-background: #11111A;
+$c-header-line: #1E1B4B;
 
 /* ==== PADDING ==== */
 
-    /* Header */
-        $pad-header: 14px;
+/* Header */
+$pad-header: 14px;
+
+/* Buttons */
+$pad-button: 12px;
 
 /* ==== FONTS ==== */
 
-    /* Mobile */
-        $fs-mobile-hero-title: 38px; 
-        $fs-mobile-status: 32px; 
-        $fs-mobile-title: 26px;
-        $fs-mobile-hero-paragraph: 15px; 
-        $fs-mobile-button: 15px;
-        $fs-mobile-paragraph: 14px; 
-        $fs-mobile-badge: 10px; 
-        $fs-mobile-header: 18px;
+/* Mobile */
+$fs-mobile-hero-title: 38px;
+$fs-mobile-status: 32px;
+$fs-mobile-title: 26px;
+$fs-mobile-hero-paragraph: 15px;
+$fs-mobile-button: 15px;
+$fs-mobile-paragraph: 14px;
+$fs-mobile-badge: 10px;
+$fs-mobile-header: 18px;
 
-    /* Desktop */
-        $fs-desktop-hero-title: 64px;
-        $fs-desktop-status: 40px; 
-        $fs-desktop-title: 36px;
-        $fs-desktop-hero-paragraph: 18px; 
-        $fs-desktop-button: 18px;
-        $fs-desktop-paragraph: 16px; 
-        $fs-desktop-badge: 11px; 
-        $fs-desktop-header: 18px;
+/* Desktop */
+$fs-desktop-hero-title: 64px;
+$fs-desktop-status: 40px;
+$fs-desktop-title: 36px;
+$fs-desktop-hero-paragraph: 18px;
+$fs-desktop-button: 18px;
+$fs-desktop-paragraph: 16px;
+$fs-desktop-badge: 11px;
+$fs-desktop-header: 18px;

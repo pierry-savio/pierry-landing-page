@@ -1,3 +1,8 @@
 @use 'sections/index' as *;
-@use 'layout/index'   as *;
-@use 'base/index'     as *;
+@use 'layout/index' as *;
+@use 'base/index' as *;
+
+body {
+    min-height: 100vh;
+    background-color: black;
+}
