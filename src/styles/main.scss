@@ -3,3 +3,7 @@
 @use 'base/index' as *;
 @use './abstracts/variables' as variables;
 @use './components/index' as *;
+
+html, * {
+    scroll-behavior: smooth;
+}
