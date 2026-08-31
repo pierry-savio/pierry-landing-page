@@ -217,6 +217,9 @@ section.hero {
                 //Container no final da hero - status
                 div.stats-container{
                     align-items: start;
+                    justify-content: center;
+                    flex-direction: row;
+                    gap: 20px;
 
                     //Estrelas da hero
                     div.stars-container{
