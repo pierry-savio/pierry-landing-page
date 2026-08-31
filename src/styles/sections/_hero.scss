@@ -1,50 +1,96 @@
-@use '../abstracts/variables' as variables;
+@use '../abstracts/variables' as var;
+@use '../base/typography' as font;
 
 section.hero {
-    background: variables.$c-header-background;
-    padding: 60px 20px 0px 20px;
+    background: var.$c-header-background;
+    padding: 
+        var.$pad-mobile-topbottom-section
+        var.$pad-mobile-leftright-section
+        var.$pad-mobile-topbottom-section
+        var.$pad-mobile-leftright-section;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
+    //Div hero content - Para separar o conteúdo do p5js no fundo
     div.hero-content {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
 
-        img {
-            width: 20px;
+        //Section title container - container dos títulos das sections
+        div.section-title-container{
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 40px;
+
+            p.section-badge{
+                @include font.font-2(800);
+                font-size: var.$fs-mobile-badge;
+                color: var.$c-badge-text;
+                background-color: var.$c-badge-background;
+                padding: 
+                    var.$pad-mobile-badge 
+                    var.$pad-mobile-badge + 10 
+                    var.$pad-mobile-badge 
+                    var.$pad-mobile-badge + 10;
+                width: fit-content;
+                border-radius: 50px;
+            }
+            h1.section-title{
+                font-size: var.$fs-mobile-title;
+                color: var.$c-title;
+            }
+            p.section-paragraph{
+                color: var.$c-paragraph;
+                font-size: var.$fs-mobile-paragraph;
+                line-height: 25px;
+            }
+        }
+
+        //Container dos botões da hero
+        div.buttons-container{
+
+            display: flex;
+            justify-content: space-between;
+
+            //Ambos os botões
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include font.font-1();
+                color: var.$c-button-text;
+            }
+
+            //Botão 1
+            a.button-contact{
+                img{
+                    width: 20px;
+                }
+            }
+
+            //Botão 2
+            a.button-portfolio{
+
+            }
+        }
+
+        //Container no final da hero - status
+        div.stats-container{
+
+            //Estrelas da hero
+            div.stars-container{
+                img{
+                    width: 30px;
+                }
+            }
+
+            //Mensagem abaixo das estrelas
+            p{
+
+            }
         }
     }
 }
-
-/*
-
-<div class="section-title-container">
-    <p class="section-badge">Seu site pronto em até 7 dias</p>
-    <h1 class="section-title">Seu site pronto, rápido e totalmente profissional</h1>
-    <p class="section-paragraph">Atraia mais clientes e venda mais com um site que funciona 24h por dia.</p>
-</div>
-
-<div class="buttons-container">
-    <a href="" class="button-contact">
-    <img src="./src/assets/images/icons/chat-icon.png" alt="Ícone chat"> Chamar no WhatsApp
-    </a>
-    <a href="" class="button-portfolio">Ver Portfólio</a>
-</div>
-
-<div class="stats-container">
-    <div class="stars-container">
-    <img src="./src/assets/images/icons/star-icon.png" alt="Estrela">
-    <img src="./src/assets/images/icons/star-icon.png" alt="Estrela">
-    <img src="./src/assets/images/icons/star-icon.png" alt="Estrela">
-    <img src="./src/assets/images/icons/star-icon.png" alt="Estrela">
-    <img src="./src/assets/images/icons/star-icon.png" alt="Estrela">
-    </div>
-    <p>+10 sites entregues de forma rápida e segura</p>
-</div>
-
-*/

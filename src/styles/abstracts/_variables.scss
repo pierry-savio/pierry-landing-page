@@ -37,22 +37,27 @@ $pad-header: 14px;
 /* Buttons */
 $pad-button: 12px;
 
+/* Sections */
+$pad-mobile-topbottom-section: 100px;
+$pad-mobile-leftright-section: 20px;
+$pad-mobile-badge: 8px;
+
 /* ==== FONTS ==== */
 
 /* Mobile */
 $fs-mobile-hero-title: 38px;
 $fs-mobile-status: 32px;
-$fs-mobile-title: 26px;
+$fs-mobile-title: 40px;
 $fs-mobile-hero-paragraph: 15px;
 $fs-mobile-button: 15px;
-$fs-mobile-paragraph: 14px;
+$fs-mobile-paragraph: 16px;
 $fs-mobile-badge: 10px;
 $fs-mobile-header: 18px;
 
 /* Desktop */
 $fs-desktop-hero-title: 64px;
 $fs-desktop-status: 40px;
-$fs-desktop-title: 36px;
+$fs-desktop-title: 66px;
 $fs-desktop-hero-paragraph: 18px;
 $fs-desktop-button: 18px;
 $fs-desktop-paragraph: 16px;
