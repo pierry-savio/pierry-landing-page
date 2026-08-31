@@ -180,7 +180,7 @@ section.hero {
                             var.$pad-desktop-badge + 10;
                     }
                     h1.section-title{
-                        font-size: var.$fs-desktop-title;
+                        font-size: var.$fs-desktop-hero-title;
                     }
                     p.section-paragraph{
                         font-size: var.$fs-desktop-hero-paragraph;
@@ -222,7 +222,7 @@ section.hero {
                     div.stars-container{
 
                         img{
-                            width: 30px;
+                            width: 22px;
                         }
                     }
 
