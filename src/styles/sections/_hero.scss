@@ -1,5 +1,6 @@
 @use '../abstracts/variables' as var;
 @use '../base/typography' as font;
+@use '../components/button' as btn;
 
 section.hero {
     background: var.$c-header-background;
@@ -14,83 +15,104 @@ section.hero {
 
     //Div hero content - Para separar o conteúdo do p5js no fundo
     div.hero-content {
-        display: flex;
-        flex-direction: column;
 
-        //Section title container - container dos títulos das sections
-        div.section-title-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+        
+        div.content-info {
 
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            margin-bottom: 40px;
 
-            p.section-badge{
-                @include font.font-2(800);
-                font-size: var.$fs-mobile-badge;
-                color: var.$c-badge-text;
-                background-color: var.$c-badge-background;
-                padding: 
-                    var.$pad-mobile-badge 
-                    var.$pad-mobile-badge + 10 
-                    var.$pad-mobile-badge 
-                    var.$pad-mobile-badge + 10;
-                width: fit-content;
-                border-radius: 50px;
-            }
-            h1.section-title{
-                font-size: var.$fs-mobile-title;
-                color: var.$c-title;
-            }
-            p.section-paragraph{
-                color: var.$c-paragraph;
-                font-size: var.$fs-mobile-paragraph;
-                line-height: 25px;
-            }
-        }
+            //Section title container - container dos títulos das sections
+            div.section-title-container{
 
-        //Container dos botões da hero
-        div.buttons-container{
-
-            display: flex;
-            justify-content: space-between;
-
-            //Ambos os botões
-            a{
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                @include font.font-1();
-                color: var.$c-button-text;
-            }
+                flex-direction: column;
+                gap: var.$gap-mobile-container;
+                margin-bottom: 40px;
 
-            //Botão 1
-            a.button-contact{
-                img{
-                    width: 20px;
+                p.section-badge{
+                    @include font.font-2(800);
+                    font-size: var.$fs-mobile-badge;
+                    color: var.$c-badge-text;
+                    background-color: var.$c-badge-background;
+                    padding: 
+                        var.$pad-mobile-badge 
+                        var.$pad-mobile-badge + 10 
+                        var.$pad-mobile-badge 
+                        var.$pad-mobile-badge + 10;
+                    width: fit-content;
+                    border-radius: 50px;
+                }
+                h1.section-title{
+                    font-size: var.$fs-mobile-title;
+                    color: var.$c-title;
+                }
+                p.section-paragraph{
+                    color: var.$c-paragraph;
+                    font-size: var.$fs-mobile-paragraph;
+                    line-height: 25px;
                 }
             }
 
-            //Botão 2
-            a.button-portfolio{
+            //Container dos botões da hero
+            div.buttons-container{
 
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                gap: var.$gap-mobile-container;
+                margin-bottom: 40px;
+
+                //Ambos os botões
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                    @include font.font-1();
+                    color: var.$c-button-text;
+                    font-size: var.$fs-mobile-button;
+                }
+
+                //Botão 1
+                a.button-contact{
+                    @include btn.button();
+                    img{
+                        width: 20px;
+                        font-size: var.$fs-mobile-button;
+                    }
+                }
+
+                //Botão 2
+                a.button-portfolio{
+
+                }
+            }
+
+            //Container no final da hero - status
+            div.stats-container{
+
+                margin-bottom: 40px;
+
+                //Estrelas da hero
+                div.stars-container{
+                    img{
+                        width: 30px;
+                    }
+                }
+
+                //Mensagem abaixo das estrelas
+                p{
+
+                }
             }
         }
-
-        //Container no final da hero - status
-        div.stats-container{
-
-            //Estrelas da hero
-            div.stars-container{
-                img{
-                    width: 30px;
-                }
-            }
-
-            //Mensagem abaixo das estrelas
-            p{
-
-            }
+        img{
+            width: 100%;
         }
     }
 }
