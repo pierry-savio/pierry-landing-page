@@ -1,6 +1,6 @@
 @use '../abstracts/variables' as var;
 @use '../base/typography' as font;
-@use '../components/button' as btn;
+@use '../components/index' as comp;
 @use '../abstracts/mixins' as mix;
 
 section.hero {
@@ -37,17 +37,7 @@ section.hero {
                 margin-bottom: 40px;
 
                 p.section-badge{
-                    @include font.font-2(800);
-                    font-size: var.$fs-mobile-badge;
-                    color: var.$c-badge-text;
-                    background-color: var.$c-badge-background;
-                    padding: 
-                        var.$pad-mobile-badge 
-                        var.$pad-mobile-badge + 10 
-                        var.$pad-mobile-badge 
-                        var.$pad-mobile-badge + 10;
-                    width: fit-content;
-                    border-radius: 50px;
+                    @include comp.badge-mobile();
                 }
                 h1.section-title{
                     font-size: var.$fs-mobile-title;
@@ -83,7 +73,7 @@ section.hero {
 
                 //Botão 1
                 a.button-contact{
-                    @include btn.button();
+                    @include comp.button();
                     img{
                         width: 20px;
                         font-size: var.$fs-mobile-button;
@@ -145,7 +135,7 @@ section.hero {
         }
         img.computer{
             width: 90%;
-            max-width: 550px;
+            max-width: 450px;
             @include mix.floating(5s, 15px);
         }
     }
@@ -172,12 +162,7 @@ section.hero {
                     gap: var.$gap-desktop-container;
 
                     p.section-badge{
-                        font-size: var.$fs-desktop-badge;
-                        padding: 
-                            var.$pad-desktop-badge 
-                            var.$pad-desktop-badge + 10 
-                            var.$pad-desktop-badge 
-                            var.$pad-desktop-badge + 10;
+                        @include comp.badge-desktop();
                     }
                     h1.section-title{
                         font-size: var.$fs-desktop-hero-title;
@@ -199,7 +184,7 @@ section.hero {
 
                     //Botão 1
                     a.button-contact{
-                        @include btn.button();
+                        @include comp.button();
                         img{
                             width: 25px;
                         }

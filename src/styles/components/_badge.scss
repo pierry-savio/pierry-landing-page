@@ -1,0 +1,26 @@
+@use '../base/typography' as font;
+@use '../abstracts/variables' as var;
+
+@mixin badge-mobile(){
+    @include font.font-2(800);
+    font-size: var.$fs-mobile-badge;
+    color: var.$c-badge-text;
+    background-color: var.$c-badge-background;
+    padding: 
+        var.$pad-mobile-badge 
+        var.$pad-mobile-badge + 10 
+        var.$pad-mobile-badge 
+        var.$pad-mobile-badge + 10;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+@mixin badge-desktop(){
+    @include badge-mobile();
+    font-size: var.$fs-desktop-badge;
+    padding: 
+        var.$pad-desktop-badge 
+        var.$pad-desktop-badge + 10 
+        var.$pad-desktop-badge 
+        var.$pad-desktop-badge + 10;
+}
