@@ -102,7 +102,7 @@ header {
 }
 
 ul.ul-mobile {
-    position: absolute;
+    position: fixed;
     width: 100%;
     transform: translateY(60px);
     background-color: variables.$c-mobile-aside-background;
