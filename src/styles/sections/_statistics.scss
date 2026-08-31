@@ -1,0 +1,6 @@
+@use '../abstracts/variables' as var;
+
+section.trust{
+    min-height: 50vh;
+    background-color: var.$c-section-background-3;
+}
