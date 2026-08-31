@@ -1,6 +1,7 @@
 @use '../abstracts/variables' as var;
 @use '../base/typography' as font;
 @use '../components/button' as btn;
+@use '../abstracts/mixins' as mix;
 
 section.hero {
     background: var.$c-header-background;
@@ -12,6 +13,8 @@ section.hero {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     //Div hero content - Para separar o conteúdo do p5js no fundo
     div.hero-content {
@@ -89,31 +92,149 @@ section.hero {
 
                 //Botão 2
                 a.button-portfolio{
+                    transition: 0.3s ease;
+                    img{
+                        width: 20px;
+                        opacity: 0;
+                        transform: translateX(-5px);
+                        transition: 0.3s ease;
+                    }
 
+                    &:hover{
+                        transform: scale(1.05);
+                        img{
+                            transform: translateX(0px);
+                            opacity: 1;
+                        }
+                    }
                 }
             }
 
             //Container no final da hero - status
             div.stats-container{
-
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
                 margin-bottom: 40px;
 
                 //Estrelas da hero
                 div.stars-container{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
                     img{
-                        width: 30px;
+                        width: 25px;
+                        transition: 0.3s ease;
+
+                        &:hover{
+                            transform: rotateY(180deg);
+                        }
                     }
                 }
 
                 //Mensagem abaixo das estrelas
                 p{
+                    font-size: var.$fs-mobile-paragraph;
+                    color: var.$c-paragraph;
 
                 }
             }
         }
-        img{
-            width: 100%;
-            max-width: 500px;
+        img.computer{
+            width: 90%;
+            max-width: 550px;
+            @include mix.floating(5s, 15px);
+        }
+    }
+}
+
+/* =========================== DESKTOP RESPONSIVITY =========================== */
+
+@media (min-width: 1200px){
+    section.hero {
+        padding: 
+            100px
+            var.$pad-desktop-leftright-section
+            0
+            var.$pad-desktop-leftright-section;
+        //Div hero content - Para separar o conteúdo do p5js no fundo
+        div.hero-content {
+            grid-template-columns: repeat(2, 1fr);
+            
+            div.content-info {
+
+                //Section title container - container dos títulos das sections
+                div.section-title-container{
+                    
+                    gap: var.$gap-desktop-container;
+
+                    p.section-badge{
+                        font-size: var.$fs-desktop-badge;
+                        padding: 
+                            var.$pad-desktop-badge 
+                            var.$pad-desktop-badge + 10 
+                            var.$pad-desktop-badge 
+                            var.$pad-desktop-badge + 10;
+                    }
+                    h1.section-title{
+                        font-size: var.$fs-desktop-title;
+                    }
+                    p.section-paragraph{
+                        font-size: var.$fs-desktop-hero-paragraph;
+                    }
+                }
+
+                //Container dos botões da hero
+                div.buttons-container{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+
+                    //Ambos os botões
+                    a{
+                        font-size: var.$fs-desktop-button;
+                    }
+
+                    //Botão 1
+                    a.button-contact{
+                        @include btn.button();
+                        img{
+                            width: 25px;
+                        }
+                    }
+
+                    //Botão 2
+                    a.button-portfolio{
+                        transition: 0.3s ease;
+                        img{
+                            width: 25px;
+                        }
+                    }
+                }
+
+                //Container no final da hero - status
+                div.stats-container{
+                    align-items: start;
+
+                    //Estrelas da hero
+                    div.stars-container{
+
+                        img{
+                            width: 30px;
+                        }
+                    }
+
+                    //Mensagem abaixo das estrelas
+                    p{
+                        font-size: var.$fs-desktop-paragraph;
+                    }
+                }
+            }
+            img.computer{
+                width: 100%;
+            }
         }
     }
 }

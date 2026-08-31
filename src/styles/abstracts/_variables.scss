@@ -42,8 +42,13 @@ $pad-mobile-topbottom-section: 100px;
 $pad-mobile-leftright-section: 20px;
 $pad-mobile-badge: 8px;
 
+$pad-desktop-topbottom-section: 200px;
+$pad-desktop-leftright-section: 150px;
+$pad-desktop-badge: 10px;
+
 /* ==== GAPS ==== */
 $gap-mobile-container: 20px;
+$gap-desktop-container: 30px;
 
 /* ==== FONTS ==== */
 
@@ -61,8 +66,12 @@ $fs-mobile-header: 18px;
 $fs-desktop-hero-title: 64px;
 $fs-desktop-status: 40px;
 $fs-desktop-title: 66px;
-$fs-desktop-hero-paragraph: 18px;
+$fs-desktop-hero-paragraph: 20px;
 $fs-desktop-button: 18px;
 $fs-desktop-paragraph: 16px;
-$fs-desktop-badge: 11px;
+$fs-desktop-badge: 14px;
 $fs-desktop-header: 18px;
+
+/* ==== LINE HEIGHT ==== */
+$lh-desktop-paragraph: 32px;
+
