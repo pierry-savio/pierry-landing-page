@@ -1,0 +1,9 @@
+@use '../abstracts/variables' as var;
+
+section.services{
+    background-color: var.$c-section-background-2;
+
+    img{
+        width: 20px;
+    }
+}
