@@ -3,16 +3,20 @@
 
 section.trust{
     background-color: var.$c-section-background-3;
+    border-top: 2px solid var.$c-border;
+    border-bottom: 2px solid var.$c-border;
+
     padding: 
-        var.$pad-mobile-topbottom-section
+        var.$pad-mobile-topbottom-section - 50
         var.$pad-mobile-leftright-section
-        var.$pad-mobile-topbottom-section
+        var.$pad-mobile-topbottom-section - 50
         var.$pad-mobile-leftright-section;
 
     div.services-container{
         display: flex;
         flex-direction: column;
         gap: var.$gap-mobile-container;
+        margin-bottom: 40px;
 
         p.title{
             color: var.$c-paragraph;
@@ -27,17 +31,79 @@ section.trust{
             justify-content: center;
             gap: 20px;
             p.niche{
+                border: 1px solid var.$c-border;
+                padding: var.$pad-mobile-badge;
+                border-radius: 10px;
+                font-size: var.$fs-mobile-paragraph;
+                font-weight: 400;
             }
         }
     }
 
     div.numbers-container{
-        div.number{
-            p.n1{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        gap: 20px;
+        
 
+        div.number{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 2px;
+            p.n1{
+                font-size: 40px;
+                font-weight: 900;
+                color: var.$c-text-highlight-2;
             }
             p.n2{
+                @include font.font-2();
+                font-size: var.$fs-mobile-paragraph;
+                color: var.$c-paragraph;
+            }
+        }
+    }
+}
 
+@media (min-width: 1200px){
+    section.trust{
+
+        padding: 
+            var.$pad-desktop-topbottom-section - 150
+            var.$pad-desktop-leftright-section
+            var.$pad-desktop-topbottom-section - 150
+            var.$pad-desktop-leftright-section;
+
+        div.services-container{
+            gap: var.$gap-desktop-container+20;
+            margin-bottom: 60px;
+
+            p.title{
+                font-size: var.$fs-desktop-paragraph+10;
+            }
+            div.niches{
+                gap: 50px;
+                p.niche{
+                    font-size: var.$fs-desktop-paragraph+5;
+                }
+            }
+        }
+
+        div.numbers-container{
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0px;
+            
+            div.number{
+                gap: 2px;
+                p.n1{
+                    font-size: 50px;
+                }
+                p.n2{
+                    font-size: var.$fs-desktop-paragraph+5;
+                }
             }
         }
     }
