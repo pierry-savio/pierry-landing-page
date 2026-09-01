@@ -104,7 +104,7 @@ section.hero {
             div.stats-container{
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: space-between;
                 align-items: center;
                 gap: 10px;
                 margin-bottom: 40px;
@@ -135,7 +135,7 @@ section.hero {
         }
         img.computer{
             width: 90%;
-            max-width: 450px;
+            max-width: 500px;
             @include mix.floating(5s, 15px);
         }
     }
@@ -201,8 +201,8 @@ section.hero {
 
                 //Container no final da hero - status
                 div.stats-container{
-                    align-items: start;
-                    justify-content: center;
+                    align-items: center;
+                    justify-content: start;
                     flex-direction: row;
                     gap: 20px;
 

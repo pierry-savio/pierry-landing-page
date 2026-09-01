@@ -26,7 +26,7 @@ $c-icon-border: #8B5CF6;
 /* Layout */
 $c-section-background-1: #08080C;
 $c-section-background-2: #11111A;
-$c-section-background-3: #2E2A45;
+$c-section-background-3: #151322;
 $c-mobile-aside-background: #11111A;
 $c-header-line: #1E1B4B;
 
@@ -36,7 +36,7 @@ $c-header-line: #1E1B4B;
 $pad-header: 14px;
 
 /* Buttons */
-$pad-button: 8px;
+$pad-button: 10px;
 
 /* Sections */
 $pad-mobile-topbottom-section: 100px;
@@ -64,7 +64,7 @@ $fs-mobile-badge: 10px;
 $fs-mobile-header: 18px;
 
 /* Desktop */
-$fs-desktop-hero-title: 50px;
+$fs-desktop-hero-title: clamp(38px, 4vw, 70px);
 $fs-desktop-status: 40px;
 $fs-desktop-title: 66px;
 $fs-desktop-hero-paragraph: 16px;

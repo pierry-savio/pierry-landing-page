@@ -18,7 +18,7 @@
     cursor: pointer;
 
     &:hover {
-        background-color: lighten(variables.$c-button-main-background, 5%);
+        background-color: filter(variables.$c-button-main-background, 0.5);
         transform: translateY(-2px);
         box-shadow: 0 7px 15px 0 rgba(variables.$c-button-main-boxshadow, 0.65);
     }

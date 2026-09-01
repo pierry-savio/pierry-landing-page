@@ -1,6 +1,44 @@
 @use '../abstracts/variables' as var;
+@use '../base/typography' as font;
 
 section.trust{
-    min-height: 50vh;
     background-color: var.$c-section-background-3;
+    padding: 
+        var.$pad-mobile-topbottom-section
+        var.$pad-mobile-leftright-section
+        var.$pad-mobile-topbottom-section
+        var.$pad-mobile-leftright-section;
+
+    div.services-container{
+        display: flex;
+        flex-direction: column;
+        gap: var.$gap-mobile-container;
+
+        p.title{
+            color: var.$c-paragraph;
+            font-size: var.$fs-mobile-paragraph;
+            @include font.font-2();
+            text-align: center;
+        }
+        div.niches{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            p.niche{
+            }
+        }
+    }
+
+    div.numbers-container{
+        div.number{
+            p.n1{
+
+            }
+            p.n2{
+
+            }
+        }
+    }
 }
