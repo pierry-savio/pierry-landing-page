@@ -36,6 +36,12 @@ section.trust{
                 border-radius: 10px;
                 font-size: var.$fs-mobile-paragraph;
                 font-weight: 400;
+                transition: 0.2s ease;
+
+                &:hover{
+                    color: var.$c-section-background-3;
+                    background-color: var.$c-text-highlight-2;
+                }
             }
         }
     }
