@@ -1,9 +1,199 @@
 @use '../abstracts/variables' as var;
+@use '../components/badge' as badge;
+@use '../base/typography' as font;
 
 section.services{
     background-color: var.$c-section-background-2;
+    padding:
+        var.$pad-mobile-topbottom-section - 0
+        var.$pad-mobile-leftright-section
+        var.$pad-mobile-topbottom-section - 0
+        var.$pad-mobile-leftright-section;
 
-    img{
-        width: 20px;
+    div.section-title-container{
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: var.$gap-mobile-container;
+
+        p.section-badge{
+            @include badge.badge-mobile();
+        }
+        h2.section-title{
+            font-size: var.$fs-mobile-title;
+            color: var.$c-title;
+        }
+        p.section-paragraph{
+            font-size: var.$fs-mobile-paragraph;
+            color: var.$c-paragraph;
+        }
+    }
+
+    div.cards-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: var.$gap-desktop-container;
+        justify-content: center;
+
+        div.card{
+            max-width: 500px;
+            background-color: var.$c-cards-background;
+            padding: var.$pad-mobile-cards;
+            display: flex;
+            flex-direction: column;
+            gap: var.$gap-mobile-container - 10;
+            border-radius: 44px 0 44px 0;
+            border: 1px solid rgba(var.$c-border, 1);
+            box-shadow: 0 0 10px 0 rgba(var.$c-highlight-border, 0);
+            transition: 0.3s ease;
+
+            &:hover{
+                border-radius: 0px 44px 0px 44px;
+                border: 1px solid rgba(var.$c-highlight-border, 0.5);
+                box-shadow: 0 0 10px 0 rgba(var.$c-highlight-border, 0.5);
+            }
+
+            img{
+                width: 40px;
+                background-color: var.$c-icons-background;
+                padding: 8px;
+                border-radius: 8px;
+                border: 1px solid var.$c-icon-border;
+            }
+            h3.card-title{
+                font-size: var.$fs-mobile-title - 10;
+                color: var.$c-title;
+            }
+            p.card-paragraph{
+                font-size: var.$fs-mobile-paragraph;
+                color: var.$c-paragraph;
+            }
+
+            div.example{
+                @include font.font-1();
+                text-align: center;
+                font-size: var.$fs-mobile-paragraph + 2;
+                color: var.$c-title;
+                cursor: pointer;
+                transition: 0.3s ease;
+
+                &:hover{
+                    color: var.$c-text-highlight-2;
+                    transform: scale(1.02);
+                }
+            }
+        }
     }
 }
+
+@media (min-width: 1200px){
+
+    section.services{
+        padding:
+            var.$pad-desktop-topbottom-section - 0
+            var.$pad-desktop-leftright-section
+            var.$pad-desktop-topbottom-section - 0
+            var.$pad-desktop-leftright-section;
+
+        div.section-title-container{
+            margin-bottom: 60px;
+            gap: var.$gap-desktop-container;
+
+            p.section-badge{
+                @include badge.badge-desktop();
+            }
+            h2.section-title{
+                font-size: var.$fs-desktop-title;
+            }
+            p.section-paragraph{
+                font-size: var.$fs-desktop-paragraph;
+            }
+        }
+
+        div.cards-container{
+
+            div.card{
+                padding: var.$pad-desktop-cards;
+                gap: var.$gap-desktop-container - 10;
+
+                img{
+                    width: 50px;
+                }
+                h3.card-title{
+                    font-size: var.$fs-desktop-title - 35;
+                }
+                p.card-paragraph{
+                    font-size: var.$fs-desktop-paragraph - 2;
+                }
+
+                div.example{
+                    font-size: var.$fs-desktop-paragraph;
+                }
+            }
+        }
+    }
+}
+
+/*
+
+<section class="services" id="services">
+    <div class="section-title-container">
+        <p class="section-badge">// NOSSOS SERVIÇOS</p>
+        <h2 class="section-title">O que podemos desenvolver para o seu negócio</h2>
+        <p class="section-paragraph">Soluções otimizadas para focar no seu cliente ideal. Design limpo, rápido e focado em converter cliques em faturamento real.</p>
+    </div>
+
+    <div class="cards-container">
+
+        <div class="card">
+            <img src="./src/assets/images/icons/phone-icon.png" alt="Ícone site institucional">
+            <h3 class="card-title">Site Institucional</h3>
+            <p class="card-paragraph">Sites institucionais para empresas, clínicas e profissionais liberais. Design moderno, responsivo e otimizado para SEO.</p>
+        </div>
+
+        <div class="card">
+            <img src="./src/assets/images/icons/phone-icon.png" alt="Ícone site institucional">
+            <h3 class="card-title">Site Institucional</h3>
+            <p class="card-paragraph">Sites institucionais para empresas, clínicas e profissionais liberais. Design moderno, responsivo e otimizado para SEO.</p>
+        </div>
+
+        <div class="card">
+            <img src="./src/assets/images/icons/phone-icon.png" alt="Ícone site institucional">
+            <h3 class="card-title">Site Institucional</h3>
+            <p class="card-paragraph">Sites institucionais para empresas, clínicas e profissionais liberais. Design moderno, responsivo e otimizado para SEO.</p>
+        </div>
+
+        <div class="card">
+            <img src="./src/assets/images/icons/phone-icon.png" alt="Ícone site institucional">
+            <h3 class="card-title">Site Institucional</h3>
+            <p class="card-paragraph">Sites institucionais para empresas, clínicas e profissionais liberais. Design moderno, responsivo e otimizado para SEO.</p>
+        </div>
+
+        <div class="card">
+            <img src="./src/assets/images/icons/phone-icon.png" alt="Ícone site institucional">
+            <h3 class="card-title">Site Institucional</h3>
+            <p class="card-paragraph">Sites institucionais para empresas, clínicas e profissionais liberais. Design moderno, responsivo e otimizado para SEO.</p>
+        </div>
+
+        <div class="card">
+            <img src="./src/assets/images/icons/phone-icon.png" alt="Ícone site institucional">
+            <h3 class="card-title">Site Institucional</h3>
+            <p class="card-paragraph">Sites institucionais para empresas, clínicas e profissionais liberais. Design moderno, responsivo e otimizado para SEO.</p>
+        </div>
+
+        <div class="card">
+            <img src="./src/assets/images/icons/phone-icon.png" alt="Ícone site institucional">
+            <h3 class="card-title">Site Institucional</h3>
+            <p class="card-paragraph">Sites institucionais para empresas, clínicas e profissionais liberais. Design moderno, responsivo e otimizado para SEO.</p>
+        </div>
+
+        <div class="card">
+            <img src="./src/assets/images/icons/phone-icon.png" alt="Ícone site institucional">
+            <h3 class="card-title">Site Institucional</h3>
+            <p class="card-paragraph">Sites institucionais para empresas, clínicas e profissionais liberais. Design moderno, responsivo e otimizado para SEO.</p>
+        </div>
+    </div>
+</section>
+
+*/

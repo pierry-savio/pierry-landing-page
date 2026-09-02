@@ -23,11 +23,14 @@ $c-whatsapp-background: #25D366;
 /* Borders */
 $c-border: #2E2A45;
 $c-icon-border: #8B5CF6;
+$c-highlight-border: #8B5CF6;
 
 /* Layout */
 $c-section-background-1: #08080C;
 $c-section-background-2: #11111A;
 $c-section-background-3: #151322;
+$c-cards-background: #262336;
+$c-icons-background: #443c5a;
 $c-mobile-aside-background: #11111A;
 $c-header-line: #1E1B4B;
 
@@ -48,9 +51,13 @@ $pad-desktop-topbottom-section: 200px;
 $pad-desktop-leftright-section: 100px;
 $pad-desktop-badge: 8px;
 
+/* Cards */
+$pad-mobile-cards: 20px;
+$pad-desktop-cards: 30px;
+
 /* ==== GAPS ==== */
 $gap-mobile-container: 20px;
-$gap-desktop-container: 10px;
+$gap-desktop-container: 35px;
 
 /* ==== FONTS ==== */
 
@@ -60,7 +67,7 @@ $fs-mobile-status: 32px;
 $fs-mobile-title: 40px;
 $fs-mobile-hero-paragraph: 15px;
 $fs-mobile-button: 15px;
-$fs-mobile-paragraph: 16px;
+$fs-mobile-paragraph: 20px;
 $fs-mobile-badge: 10px;
 $fs-mobile-header: 18px;
 
@@ -70,7 +77,7 @@ $fs-desktop-status: 40px;
 $fs-desktop-title: 66px;
 $fs-desktop-hero-paragraph: 16px;
 $fs-desktop-button: 14px;
-$fs-desktop-paragraph: 14px;
+$fs-desktop-paragraph: 20px;
 $fs-desktop-badge: 12px;
 $fs-desktop-header: 18px;
 

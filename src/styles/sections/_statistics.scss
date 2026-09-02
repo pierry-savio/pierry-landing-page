@@ -69,6 +69,8 @@ section.trust{
                 @include font.font-2();
                 font-size: var.$fs-mobile-paragraph;
                 color: var.$c-paragraph;
+                text-align: center;
+                text-justify: center;
             }
         }
     }
@@ -88,12 +90,12 @@ section.trust{
             margin-bottom: 60px;
 
             p.title{
-                font-size: var.$fs-desktop-paragraph+5;
+                font-size: var.$fs-desktop-paragraph;
             }
             div.niches{
                 gap: 50px;
                 p.niche{
-                    font-size: var.$fs-desktop-paragraph+5;
+                    font-size: var.$fs-desktop-paragraph;
                 }
             }
         }
@@ -108,7 +110,7 @@ section.trust{
                     font-size: 50px;
                 }
                 p.n2{
-                    font-size: var.$fs-desktop-paragraph+5;
+                    font-size: var.$fs-desktop-paragraph;
                 }
             }
         }
