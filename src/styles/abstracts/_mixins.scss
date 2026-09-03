@@ -16,3 +16,20 @@
         }
     }
 }
+
+@mixin floating-2 ($time: 1s, $distance: -5px){
+
+    animation: floating $time ease infinite;
+
+    @keyframes floating {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY($distance) ;
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+}
