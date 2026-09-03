@@ -10,41 +10,42 @@ const card_events = document.getElementById("card_events");
 
 const phone_image = document.getElementById("phone_image") as HTMLImageElement;
 
-const popup = document.getElementById("popup");
+const popup = document.getElementById("popup") as HTMLElement;
+popup?.classList.add("closed");
 
-card_porfolio?.addEventListener("click", () =>{
+card_porfolio?.addEventListener("click", () => {
     popup?.classList.remove("closed");
     phone_image.src = "./src/assets/images/services/porfolio-online.png";
 });
-card_linktree?.addEventListener("click", () =>{
+card_linktree?.addEventListener("click", () => {
     popup?.classList.remove("closed");
     phone_image.src = "./src/assets/images/services/linktree.png";
 });
-card_curriculum?.addEventListener("click", () =>{
+card_curriculum?.addEventListener("click", () => {
     popup?.classList.remove("closed");
     phone_image.src = "./src/assets/images/services/curriculo-digital.png";
 });
-card_landing?.addEventListener("click", () =>{
+card_landing?.addEventListener("click", () => {
     popup?.classList.remove("closed");
     phone_image.src = "./src/assets/images/services/landing-page.png";
 });
-card_sells?.addEventListener("click", () =>{
+card_sells?.addEventListener("click", () => {
     popup?.classList.remove("closed");
     phone_image.src = "./src/assets/images/services/pagina-de-vendas.png";
 });
-card_birthday?.addEventListener("click", () =>{
+card_birthday?.addEventListener("click", () => {
     popup?.classList.remove("closed");
     phone_image.src = "./src/assets/images/services/pagina-de-aniversario.png";
 });
-card_institucional?.addEventListener("click", () =>{
+card_institucional?.addEventListener("click", () => {
     popup?.classList.remove("closed");
     phone_image.src = "./src/assets/images/services/site-institucional.png";
 });
-card_events?.addEventListener("click", () =>{
+card_events?.addEventListener("click", () => {
     popup?.classList.remove("closed");
     phone_image.src = "./src/assets/images/services/pagina-de-evento.png";
 });
 
-popup?.addEventListener("click", () =>{
+popup?.addEventListener("click", () => {
     popup?.classList.add("closed");
 });

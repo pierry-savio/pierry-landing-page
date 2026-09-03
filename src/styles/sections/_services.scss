@@ -3,41 +3,40 @@
 @use '../components/badge' as badge;
 @use '../base/typography' as font;
 
-section.services{
+section.services {
     background-color: var.$c-section-background-2;
     padding:
-        var.$pad-mobile-topbottom-section - 0
-        var.$pad-mobile-leftright-section
-        var.$pad-mobile-topbottom-section - 0
-        var.$pad-mobile-leftright-section;
+        var.$pad-mobile-topbottom-section - 0 var.$pad-mobile-leftright-section var.$pad-mobile-topbottom-section - 0 var.$pad-mobile-leftright-section;
 
-    div.section-title-container{
+    div.section-title-container {
         margin-bottom: 40px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: var.$gap-mobile-container;
 
-        p.section-badge{
+        p.section-badge {
             @include badge.badge-mobile();
         }
-        h2.section-title{
+
+        h2.section-title {
             font-size: var.$fs-mobile-title;
             color: var.$c-title;
         }
-        p.section-paragraph{
+
+        p.section-paragraph {
             font-size: var.$fs-mobile-paragraph;
             color: var.$c-paragraph;
         }
     }
 
-    div.cards-container{
+    div.cards-container {
         display: flex;
         flex-wrap: wrap;
         gap: var.$gap-desktop-container;
         justify-content: center;
 
-        div.card{
+        div.card {
             max-width: 500px;
             background-color: var.$c-cards-background;
             padding: var.$pad-mobile-cards;
@@ -50,27 +49,29 @@ section.services{
             box-shadow: -5px 0 15px 0 rgba(var.$c-highlight-border, 0.2);
             transition: 0.3s ease;
 
-            &:hover{
+            &:hover {
                 transform: translateY(-5px) rotate(1deg);
             }
 
-            img{
+            img {
                 width: 40px;
                 background-color: var.$c-icons-background;
                 padding: 8px;
                 border-radius: 8px;
                 border: 1px solid var.$c-icon-border;
             }
-            h3.card-title{
+
+            h3.card-title {
                 font-size: var.$fs-mobile-title - 10;
                 color: var.$c-title;
             }
-            p.card-paragraph{
+
+            p.card-paragraph {
                 font-size: var.$fs-mobile-paragraph;
                 color: var.$c-paragraph;
             }
 
-            div.example{
+            div.example {
                 @include font.font-1();
                 text-align: center;
                 font-size: var.$fs-mobile-paragraph + 2;
@@ -78,7 +79,7 @@ section.services{
                 cursor: pointer;
                 transition: 0.3s ease;
 
-                &:hover{
+                &:hover {
                     color: var.$c-text-highlight-2;
                     transform: scale(1.02);
                 }
@@ -86,11 +87,11 @@ section.services{
         }
     }
 
-    div.popup-background{
-        
+    div.popup-background {
+
         pointer-events: all;
         opacity: 1;
-        
+
         position: fixed;
         top: 0;
         left: 0;
@@ -104,71 +105,72 @@ section.services{
         cursor: pointer;
         transition: 0.5s ease;
 
-        div.phone{
-            img{
+        div.phone {
+            img {
                 height: 75vh;
                 max-height: 800px;
                 transform: translateY(0px);
                 //@include mix.floating-2(3s);
                 transition: 0.3s ease;
-            }   
+            }
         }
     }
 
-    div.popup-background.closed{
-        
+    div.popup-background.closed {
+
         pointer-events: none;
         opacity: 0;
 
-        div.phone{
-            img{
+        div.phone {
+            img {
                 transform: translateY(200px);
-            }   
+            }
         }
     }
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
 
-    section.services{
+    section.services {
         padding:
-            var.$pad-desktop-topbottom-section - 0
-            var.$pad-desktop-leftright-section
-            var.$pad-desktop-topbottom-section - 0
-            var.$pad-desktop-leftright-section;
+            var.$pad-desktop-topbottom-section - 0 var.$pad-desktop-leftright-section var.$pad-desktop-topbottom-section - 0 var.$pad-desktop-leftright-section;
 
-        div.section-title-container{
+        div.section-title-container {
             margin-bottom: 60px;
             gap: var.$gap-desktop-container;
 
-            p.section-badge{
+            p.section-badge {
                 @include badge.badge-desktop();
             }
-            h2.section-title{
+
+            h2.section-title {
                 font-size: var.$fs-desktop-title;
             }
-            p.section-paragraph{
+
+            p.section-paragraph {
                 font-size: var.$fs-desktop-paragraph;
             }
         }
 
-        div.cards-container{
+        div.cards-container {
 
-            div.card{
+            div.card {
                 padding: var.$pad-desktop-cards;
                 gap: var.$gap-desktop-container - 10;
 
-                img{
+                img {
                     width: 50px;
                 }
-                h3.card-title{
+
+                h3.card-title {
                     font-size: var.$fs-desktop-title - 35;
                 }
-                p.card-paragraph{
+
+                p.card-paragraph {
                     font-size: var.$fs-desktop-paragraph - 2;
                 }
 
-                div.example{
+                div.example {
                     font-size: var.$fs-desktop-paragraph;
                 }
             }

@@ -1,6 +1,6 @@
 /* ANIMATIONS */
 
-@mixin floating ($time: 1s, $distance: -5px){
+@mixin floating ($time: 1s, $distance: -5px) {
 
     animation: floating $time ease infinite;
 
@@ -8,26 +8,30 @@
         0% {
             transform: translateY(0px) rotate(0deg);
         }
+
         50% {
             transform: translateY($distance) rotate(2deg);
         }
+
         100% {
             transform: translateY(0px) rotate(0deg);
         }
     }
 }
 
-@mixin floating-2 ($time: 1s, $distance: -5px){
+@mixin floating-2 ($time: 1s, $distance: -5px) {
 
-    animation: floating $time ease infinite;
+    animation: floating $time linear infinite;
 
     @keyframes floating {
         0% {
             transform: translateY(0px);
         }
+
         50% {
-            transform: translateY($distance) ;
+            transform: translateY($distance);
         }
+
         100% {
             transform: translateY(0px);
         }
