@@ -66,6 +66,7 @@ section.process{
                     height: 100%;
                     width: 2px;
                     background-color: var.$c-border;
+                    transition: 0.3s ease;
                 }
             }
 
@@ -133,6 +134,7 @@ section.process{
             div.step{
                 flex-direction: column;
                 gap: var.$gap-desktop-container - 10;
+
                 div.numbers{
                     gap: var.$gap-desktop-container - 10;
                     
