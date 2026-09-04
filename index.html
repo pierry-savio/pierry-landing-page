@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
     rel="stylesheet">
 
+  <style>#popup:not(.open) { opacity: 0; pointer-events: none; }</style>
 </head>
 
 <body>
@@ -271,17 +272,84 @@
         </div>
       </div>
 
-      <div class="popup-background closed" id="popup">
+      <div class="popup-background" id="popup">
         <div class="phone">
           <img src="./src/assets/images/services/pagina-de-evento.png" alt="Exemplar de serviço" id="phone_image">
         </div>
       </div>
     </section>
+
+    <!-- ==================== PROCESS SECTION ==================== -->
+    <section class="process" id="process">
+      <div class="section-title-container">
+        <p class="section-badge">COMO FUNCIONA O PROCESSO</p>
+        <h2 class="section-title">Como funciona?</h2>
+        <p class="section-paragraph">Seu site pronto em 4 passos simples</p>
+      </div>
+
+        <div class="steps-container-mobile">
+
+          <div class="step">
+            <div class="numbers">
+              <h4>01</h4>
+              <div class="vertical-line"></div>
+            </div>
+            <div class="texts">
+              <h3>Idéias & Alinhamento</h3>
+              <p>Conversamos pelo WhatsApp ou Zoom sobre sua idéia, mercado de atuação e referências de estilo.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="numbers">
+              <h4>02</h4>
+              <div class="vertical-line"></div>
+            </div>
+            <div class="texts">
+              <h3>Criação do Design</h3>
+              <p>Construo um protótipo visual interativo focado na melhor experiência e persuasão para o seu público.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="numbers">
+              <h4>03</h4>
+              <div class="vertical-line"></div>
+            </div>
+            <div class="texts">
+              <h3>Desenvolvimento Ágil</h3>
+              <p>Transformo o design em código otimizado para celulares e computadores com altíssima velocidade.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="numbers">
+              <h4>04</h4>
+              <div class="vertical-line"></div>
+            </div>
+            <div class="texts">
+              <h3>Entrega & Ajustes</h3>
+              <p>Colocamos o site no ar com seu domínio próprio, fazemos os testes finais e entregamos tutoriais de uso.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="steps-container-desktop">
+          
+        </div>
+
+      <div class="cta-container">
+        <a href="">
+          Fazer Orçamento
+        </a>
+      </div>
+    </section>
   </main>
 
-  <script type="module" src="/src/scripts/main.ts"></script>
   <script type="module" src="/src/scripts/aside_menu.ts"></script>
   <script type="module" src="/src/scripts/service.ts"></script>
+  <script type="module" src="/src/scripts/main.ts"></script>
+  
   <!--P5JS BACKGROUND-->
   <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.min.js"></script>
   <script src="./src/scripts/p5.js"></script>

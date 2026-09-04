@@ -1,0 +1,96 @@
+@use '../abstracts/variables' as var;
+@use '../components/badge' as badge;
+@use '../base/typography' as font;
+@use '../components/button' as btn;
+
+section.process{
+
+    min-height: 100vh;
+    background-color: var.$c-section-background-3;
+        padding:
+            var.$pad-mobile-topbottom-section - 0 
+            var.$pad-mobile-leftright-section 
+            var.$pad-mobile-topbottom-section - 0 
+            var.$pad-mobile-leftright-section;
+    border-top: 2px solid var.$c-border;
+    border-bottom: 2px solid var.$c-border;
+
+    //Section title container
+    div.section-title-container{
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: var.$gap-mobile-container;
+
+        p.section-badge {
+            @include badge.badge-mobile();
+        }
+
+        h2.section-title {
+            font-size: var.$fs-mobile-title;
+            color: var.$c-title;
+        }
+
+        p.section-paragraph {
+            font-size: var.$fs-mobile-paragraph;
+            color: var.$c-paragraph;
+        }
+    }
+
+    //Steps MOBILE
+    div.steps-container-mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var.$gap-mobile-container + 20;
+        margin-bottom: 40px;
+
+        div.step{
+            display: flex;
+            gap: var.$gap-mobile-container;
+            div.numbers{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: var.$gap-mobile-container - 10;
+                
+                h4{
+                    font-size: var.$fs-mobile-title - 10px;
+                    width: 40px;
+                    @include font.font-2();
+                    font-weight: 900;
+                    color: var.$c-border;
+                }
+                div.vertical-line{
+                    height: 100%;
+                    width: 2px;
+                    background-color: var.$c-border;
+                }
+            }
+
+            div.texts{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                h3{
+                    font-size: var.$fs-mobile-title - 20px;
+                }
+                p{
+                    font-size: var.$fs-mobile-paragraph - 5px;
+                    color: var.$c-paragraph;
+                }
+            }
+        }
+    }
+
+    //CTA
+    div.cta-container{
+        a{
+            @include btn.button();
+            @include font.font-1();
+            font-weight: 700;
+        }
+    }
+}

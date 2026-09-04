@@ -88,9 +88,8 @@ section.services {
     }
 
     div.popup-background {
-
-        pointer-events: all;
-        opacity: 1;
+        pointer-events: none;
+        opacity: 0;
 
         position: fixed;
         top: 0;
@@ -109,21 +108,19 @@ section.services {
             img {
                 height: 75vh;
                 max-height: 800px;
-                transform: translateY(0px);
-                //@include mix.floating-2(3s);
+                transform: translateY(200px);
                 transition: 0.3s ease;
             }
         }
     }
 
-    div.popup-background.closed {
-
-        pointer-events: none;
-        opacity: 0;
+    div.popup-background.open {
+        pointer-events: all;
+        opacity: 1;
 
         div.phone {
             img {
-                transform: translateY(200px);
+                transform: translateY(0);
             }
         }
     }
