@@ -5,7 +5,6 @@
 
 section.process{
 
-    min-height: 100vh;
     background-color: var.$c-section-background-3;
         padding:
             var.$pad-mobile-topbottom-section - 0 
@@ -38,12 +37,12 @@ section.process{
         }
     }
 
-    //Steps MOBILE
-    div.steps-container-mobile{
+    //Steps
+    div.steps-container{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: start;
         gap: var.$gap-mobile-container + 20;
         margin-bottom: 40px;
 
@@ -63,7 +62,7 @@ section.process{
                     font-weight: 900;
                     color: var.$c-border;
                 }
-                div.vertical-line{
+                div.line{
                     height: 100%;
                     width: 2px;
                     background-color: var.$c-border;
@@ -87,10 +86,84 @@ section.process{
 
     //CTA
     div.cta-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         a{
             @include btn.button();
             @include font.font-1();
             font-weight: 700;
+            font-size: var.$fs-mobile-paragraph;
+            max-width: 300px;
         }
     }
+}
+
+@media (min-width: 1200px){
+
+    section.process{
+        min-height: 100vh;
+        background-color: var.$c-section-background-3;
+            padding:
+                var.$pad-desktop-topbottom-section - 0 
+                var.$pad-desktop-leftright-section 
+                var.$pad-desktop-topbottom-section - 0 
+                var.$pad-desktop-leftright-section;
+
+        //Section title container
+        div.section-title-container{
+            margin-bottom: 80px;
+            gap: var.$gap-desktop-container;
+
+            h2.section-title {
+                font-size: var.$fs-desktop-title;
+            }
+
+            p.section-paragraph {
+                font-size: var.$fs-desktop-paragraph;
+            }
+        }
+
+        //Steps
+        div.steps-container{
+            flex-direction: row;
+            gap: var.$gap-desktop-container + 20;
+            margin-bottom: 80px;
+
+            div.step{
+                flex-direction: column;
+                gap: var.$gap-desktop-container - 10;
+                div.numbers{
+                    gap: var.$gap-desktop-container - 10;
+                    
+                    h4{
+                        font-size: var.$fs-desktop-title - 10px;
+                        width: 80px;
+                    }
+                    div.line{
+                        height: 2px;
+                        width: 100%;
+                    }
+                }
+
+                div.texts{
+                    gap: 20px;
+                    h3{
+                        font-size: var.$fs-desktop-title - 35px;
+                    }
+                    p{
+                        font-size: var.$fs-desktop-paragraph - 5px;
+                    }
+                }
+            }
+        }
+
+        //CTA
+        div.cta-container{
+            a{
+                font-size: var.$fs-desktop-paragraph;
+            }
+        }
+    }
+
 }
