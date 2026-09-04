@@ -1,0 +1,57 @@
+@use '../abstracts/variables' as var;
+@use '../base/typography' as font;
+@use '../components/badge' as badge;
+
+section.portfolio {
+    background: var.$c-section-background-2;
+    padding:
+        var.$pad-mobile-topbottom-section var.$pad-mobile-leftright-section var.$pad-mobile-topbottom-section var.$pad-mobile-leftright-section;
+    min-height: 100vh;
+
+    div.section-title-container {
+
+        display: flex;
+        flex-direction: column;
+        gap: var.$gap-mobile-container;
+
+        p.section-badge {
+            @include badge.badge-mobile();
+        }
+
+        h2.section-title {}
+    }
+
+    div.carousel-container {
+        div.card {
+            img {
+                width: 80%;
+            }
+
+            div.texts-container {
+                h3 {}
+
+                p {}
+            }
+
+            a {
+                img {
+                    width: 25px;
+                }
+            }
+        }
+
+        div.control-container {
+            img {
+                width: 30px;
+            }
+
+            img.arrow-left {}
+
+            img.arrow-right {}
+
+            div.points-container {
+                div.point {}
+            }
+        }
+    }
+}

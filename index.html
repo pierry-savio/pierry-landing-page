@@ -14,7 +14,12 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
     rel="stylesheet">
 
-  <style>#popup:not(.open) { opacity: 0; pointer-events: none; }</style>
+  <style>
+    #popup:not(.open) {
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -329,7 +334,8 @@
           </div>
           <div class="texts">
             <h3>Entrega & Ajustes</h3>
-            <p>Colocamos o site no ar com seu domínio próprio, fazemos os testes finais e entregamos tutoriais de uso.</p>
+            <p>Colocamos o site no ar com seu domínio próprio, fazemos os testes finais e entregamos tutoriais de uso.
+            </p>
           </div>
         </div>
       </div>
@@ -340,12 +346,54 @@
         </a>
       </div>
     </section>
+
+    <!-- ==================== PORTFOLIO SECTION ==================== -->
+    <section class="portfolio" id="portfolio">
+      <div class="section-title-container">
+        <p class="section-badge">CASOS DE SUCESSO</p>
+        <h2 class="section-title">Alguns dos projetos que já coloquei no ar</h2>
+      </div>
+
+      <div class="carousel-container">
+
+        <div class="card">
+          <img src="" alt="">
+
+          <div class="texts-container">
+            <h3>Luciana Psico.</h3>
+            <p>Landing Page</p>
+          </div>
+
+          <a href="">
+            Ver site ao vivo
+            <img src="./src/assets/images/icons/purple-arrow-icon.png" alt="Ícone de link">
+          </a>
+
+        </div>
+
+        <div class="control-container">
+          <img src="./src/assets/images/icons/arrow-left-icon.png" class="arrow-left" id="arrow_left" alt="Seta da esquerda">
+
+          <div class="points-container">
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+          </div>
+
+          <img src="./src/assets/images/icons/arrow-right-icon.png" class="arrow-right" id="arrow_right" alt="Seta da direita">
+        </div>
+
+      </div>
+    </section>
   </main>
 
   <script type="module" src="/src/scripts/aside_menu.ts"></script>
   <script type="module" src="/src/scripts/service.ts"></script>
   <script type="module" src="/src/scripts/main.ts"></script>
-  
+
   <!--P5JS BACKGROUND-->
   <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.min.js"></script>
   <script src="./src/scripts/p5.js"></script>
