@@ -13,15 +13,21 @@ section.portfolio {
         display: flex;
         flex-direction: column;
         gap: var.$gap-mobile-container;
+        margin-bottom: 40px;
 
         p.section-badge {
             @include badge.badge-mobile();
         }
 
-        h2.section-title {}
+        h2.section-title {
+            font-size: var.$fs-mobile-title;
+            color: var.$c-title;
+        }
     }
 
     div.carousel-container {
+        border: 1px solid red;
+
         div.card {
             img {
                 width: 80%;
