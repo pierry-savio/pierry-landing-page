@@ -27,10 +27,17 @@ section.portfolio {
 
     div.carousel-container {
         border: 1px solid red;
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        height: 300px;
 
-        div.card {
+
+        div.p-card {
+            transition: 1s ease;
+
             img {
-                width: 80%;
+                width: 100%;
             }
 
             div.texts-container {
@@ -46,14 +53,43 @@ section.portfolio {
             }
         }
 
+        div.p-card.right {
+            transform: translateX(165px);
+        }
+
+        div.p-card.hid-right {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        div.p-card.left {
+            transform: translateX(-465px);
+        }
+
+        div.p-card.hid-left {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
         div.control-container {
+            border: 1px solid blue;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+
             img {
-                width: 30px;
+                width: 35px;
             }
 
             img.arrow-left {}
 
-            img.arrow-right {}
+            img.arrow-right {
+                &:active {
+                    background-color: red;
+                }
+            }
 
             div.points-container {
                 div.point {}
