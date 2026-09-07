@@ -5,15 +5,17 @@
 section.portfolio {
     background: var.$c-section-background-2;
     padding:
-        var.$pad-mobile-topbottom-section var.$pad-mobile-leftright-section var.$pad-mobile-topbottom-section var.$pad-mobile-leftright-section;
+        var.$pad-mobile-topbottom-section 0 var.$pad-mobile-topbottom-section 0;
     min-height: 100vh;
 
+    // ========== TITLE ==========
     div.section-title-container {
-
         display: flex;
         flex-direction: column;
         gap: var.$gap-mobile-container;
         margin-bottom: 40px;
+        padding:
+            0 var.$pad-mobile-leftright-section 0 var.$pad-mobile-leftright-section;
 
         p.section-badge {
             @include badge.badge-mobile();
@@ -25,74 +27,246 @@ section.portfolio {
         }
     }
 
+    // ========== CAROUSEL ==========
     div.carousel-container {
-        border: 1px solid red;
-        width: 100%;
-        display: flex;
+        position: relative;
         overflow: hidden;
-        height: 300px;
-
+        width: 100%;
+        // Aspect ratio controls the carousel height based on card content
+        min-height: 420px;
 
         div.p-card {
-            transition: 1s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 0 var.$pad-mobile-leftright-section;
+            opacity: 1;
+            transform: translateX(0);
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                        opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
-            img {
+            // Project screenshot
+            & > img {
                 width: 100%;
+                border-radius: 12px;
+                border: 1px solid var.$c-border;
+                margin-bottom: 16px;
+                object-fit: cover;
             }
 
+            // Texts below the image
             div.texts-container {
-                h3 {}
+                margin-bottom: 12px;
 
-                p {}
+                h3 {
+                    font-size: 22px;
+                    color: var.$c-title;
+                    margin-bottom: 4px;
+                }
+
+                p {
+                    font-size: 14px;
+                    color: var.$c-paragraph;
+                }
             }
 
+            // CTA link
             a {
+                @include font.font-1(600);
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 15px;
+                color: var.$c-project-cta-text;
+                transition: gap 0.3s ease, opacity 0.3s ease;
+
+                &:hover {
+                    gap: 12px;
+                    opacity: 0.8;
+                }
+
                 img {
-                    width: 25px;
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+
+            // ---- Position states ----
+            // Card is to the right (next, adjacent)
+            &.right {
+                transform: translateX(100%);
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            // Card is far to the right (hidden queue)
+            &.hid-right {
+                transform: translateX(100%);
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            // Card is to the left (previous, adjacent)
+            &.left {
+                transform: translateX(-100%);
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            // Card is far to the left (hidden queue)
+            &.hid-left {
+                transform: translateX(-100%);
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+    }
+
+    // ========== CONTROLS (arrows + dots) ==========
+    div.control-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        padding: 20px var.$pad-mobile-leftright-section 0;
+
+        // Arrow buttons
+        img.arrow-left,
+        img.arrow-right {
+            width: 44px;
+            height: 44px;
+            padding: 10px;
+            border-radius: 50%;
+            border: 1px solid var.$c-border;
+            background-color: var.$c-cards-background;
+            cursor: pointer;
+            transition: background-color 0.3s ease,
+                        border-color 0.3s ease,
+                        transform 0.2s ease;
+
+            &:hover {
+                background-color: var.$c-icons-background;
+                border-color: var.$c-highlight-border;
+                transform: scale(1.1);
+            }
+
+            &:active {
+                transform: scale(0.95);
+            }
+        }
+
+        // Dots / indicators
+        div.points-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            div.point {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: var.$c-border;
+                transition: background-color 0.3s ease,
+                            transform 0.3s ease,
+                            width 0.3s ease,
+                            border-radius 0.3s ease;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: var.$c-icons-background;
+                }
+
+                // Active dot state (toggled via JS)
+                &.active {
+                    background-color: var.$c-text-highlight;
+                    width: 28px;
+                    border-radius: 6px;
+                    transform: scale(1.05);
                 }
             }
         }
+    }
+}
 
-        div.p-card.right {
-            transform: translateX(165px);
+// ==================== DESKTOP ====================
+@media (min-width: 1200px) {
+
+    section.portfolio {
+        padding:
+            var.$pad-desktop-topbottom-section 0 var.$pad-desktop-topbottom-section 0;
+
+        div.section-title-container {
+            gap: var.$gap-desktop-container;
+            margin-bottom: 60px;
+            padding:
+                0 var.$pad-desktop-leftright-section 0 var.$pad-desktop-leftright-section;
+
+            p.section-badge {
+                @include badge.badge-desktop();
+            }
+
+            h2.section-title {
+                font-size: var.$fs-desktop-title;
+            }
         }
 
-        div.p-card.hid-right {
-            transform: translateX(100%);
-            opacity: 0;
-        }
+        div.carousel-container {
+            min-height: 520px;
 
-        div.p-card.left {
-            transform: translateX(-465px);
-        }
+            div.p-card {
+                padding: 0 var.$pad-desktop-leftright-section;
 
-        div.p-card.hid-left {
-            transform: translateX(-100%);
-            opacity: 0;
+                // Limit card width for large screens
+                max-width: 700px;
+                left: 50%;
+                margin-left: -350px; // half of max-width
+
+                & > img {
+                    border-radius: 16px;
+                    margin-bottom: 20px;
+                }
+
+                div.texts-container {
+                    margin-bottom: 16px;
+
+                    h3 {
+                        font-size: 28px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+
+                a {
+                    font-size: 16px;
+                }
+            }
         }
 
         div.control-container {
-            border: 1px solid blue;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            height: 50px;
+            gap: 32px;
+            padding-top: 30px;
 
-            img {
-                width: 35px;
-            }
-
-            img.arrow-left {}
-
+            img.arrow-left,
             img.arrow-right {
-                &:active {
-                    background-color: red;
-                }
+                width: 52px;
+                height: 52px;
+                padding: 12px;
             }
 
             div.points-container {
-                div.point {}
+                gap: 10px;
+
+                div.point {
+                    width: 12px;
+                    height: 12px;
+
+                    &.active {
+                        width: 34px;
+                    }
+                }
             }
         }
     }
