@@ -5,7 +5,7 @@
 section.portfolio {
     background: var.$c-section-background-2;
     padding:
-        var.$pad-mobile-topbottom-section var.$pad-mobile-leftright-section var.$pad-mobile-topbottom-section var.$pad-mobile-leftright-section;
+        var.$pad-mobile-topbottom-section 0 var.$pad-mobile-topbottom-section 0;
     min-height: 100vh;
 
     // ========== TITLE ==========
@@ -14,6 +14,8 @@ section.portfolio {
         flex-direction: column;
         gap: var.$gap-mobile-container;
         margin-bottom: 40px;
+        padding:
+            0 var.$pad-mobile-leftright-section 0 var.$pad-mobile-leftright-section;
 
         p.section-badge {
             @include badge.badge-mobile();
@@ -45,8 +47,9 @@ section.portfolio {
 
             div.p-card {
                 position: absolute;
-
+                pointer-events: auto;
                 max-width: 400px;
+                width: 85%;
                 border: 2px solid var.$c-highlight-border;
                 overflow: hidden;
                 padding: 20px;
@@ -95,34 +98,45 @@ section.portfolio {
 
                     img {
                         width: 25px;
+                        transition: 0.3s ease;
+                    }
+
+                    &:hover {
+                        img {
+                            transform: translateX(5px);
+                        }
                     }
                 }
             }
 
             div.p-card.right {
-                transform: translateX(125%);
-                opacity: 0.5;
+                transform: translateX(125%) scale(0.9);
+                pointer-events: none;
+                opacity: 0.25;
             }
 
             div.p-card.left {
-                transform: translateX(-125%);
-                opacity: 0.5;
+                transform: translateX(-125%) scale(0.9);
+                pointer-events: none;
+                opacity: 0.25;
             }
 
             div.p-card.hid-right {
-                transform: translateX(150%);
+                transform: translateX(150%) scale(0.75);
+                pointer-events: none;
                 opacity: 0;
             }
 
             div.p-card.hid-left {
-                transform: translateX(-150%);
+                transform: translateX(-150%) scale(0.75);
+                pointer-events: none;
                 opacity: 0;
             }
         }
 
         div.control-container {
             align-self: center;
-            width: 100%;
+            width: 85%;
             max-width: 500px;
             display: flex;
             justify-content: space-between;
@@ -146,8 +160,6 @@ section.portfolio {
                 }
             }
 
-            img.arrow-left {}
-
             div.dots-container {
                 display: flex;
                 width: 100%;
@@ -158,14 +170,47 @@ section.portfolio {
                     height: 10px;
                     background-color: var.$c-badge-background;
                     border-radius: 50%;
+                    transition: 0.5s ease;
                 }
 
                 div.active {
                     background-color: var.$c-text-highlight;
+                    transform: scale(1.25);
                 }
             }
+        }
+    }
+}
 
-            img.arrow-right {}
+@media (min-width: 1200px) {
+
+    section.portfolio {
+        padding:
+            var.$pad-desktop-topbottom-section 0 var.$pad-desktop-topbottom-section 0;
+
+        // ========== TITLE ==========
+        div.section-title-container {
+            gap: var.$gap-desktop-container;
+            margin-bottom: 80px;
+            padding:
+                0 var.$pad-desktop-leftright-section 0 var.$pad-desktop-leftright-section;
+
+            p.section-badge {
+                @include badge.badge-desktop();
+            }
+
+            h2.section-title {
+                font-size: var.$fs-desktop-title;
+            }
+        }
+
+        // ========== CAROUSEL ==========
+        div.carousel-container {
+            gap: 40px;
+
+            div.p-cards-container {
+                min-height: 500px;
+            }
         }
     }
 }

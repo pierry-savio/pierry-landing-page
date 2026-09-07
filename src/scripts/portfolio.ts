@@ -1,8 +1,18 @@
 const arrow_left = document.getElementById("arrow_left");
 const arrow_right = document.getElementById("arrow_right");
 const p_cards = document.getElementsByClassName("p-card");
+const dots = document.getElementsByClassName("dot");
 
 let current_index = 0;
+
+function updateDots() {
+    for (let i = 0; i < dots.length; i++) {
+        if (dots[i].classList.contains("active")) {
+            dots[i].classList.remove("active");
+        }
+    }
+    dots[current_index].classList.add("active");
+}
 
 arrow_right?.addEventListener("click", () => {
     if (current_index < p_cards.length - 1) {
@@ -30,6 +40,7 @@ arrow_right?.addEventListener("click", () => {
         }
 
         current_index++;
+        updateDots();
     }
 
 });
@@ -60,6 +71,7 @@ arrow_left?.addEventListener("click", () => {
         }
 
         current_index--;
+        updateDots();
     }
 });
 
