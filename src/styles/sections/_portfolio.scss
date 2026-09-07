@@ -5,7 +5,7 @@
 section.portfolio {
     background: var.$c-section-background-2;
     padding:
-        var.$pad-mobile-topbottom-section 0 var.$pad-mobile-topbottom-section 0;
+        var.$pad-mobile-topbottom-section var.$pad-mobile-leftright-section var.$pad-mobile-topbottom-section var.$pad-mobile-leftright-section;
     min-height: 100vh;
 
     // ========== TITLE ==========
@@ -14,8 +14,6 @@ section.portfolio {
         flex-direction: column;
         gap: var.$gap-mobile-container;
         margin-bottom: 40px;
-        padding:
-            0 var.$pad-mobile-leftright-section 0 var.$pad-mobile-leftright-section;
 
         p.section-badge {
             @include badge.badge-mobile();
@@ -29,245 +27,145 @@ section.portfolio {
 
     // ========== CAROUSEL ==========
     div.carousel-container {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        // Aspect ratio controls the carousel height based on card content
-        min-height: 420px;
-
-        div.p-card {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 0 var.$pad-mobile-leftright-section;
-            opacity: 1;
-            transform: translateX(0);
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-                        opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-
-            // Project screenshot
-            & > img {
-                width: 100%;
-                border-radius: 12px;
-                border: 1px solid var.$c-border;
-                margin-bottom: 16px;
-                object-fit: cover;
-            }
-
-            // Texts below the image
-            div.texts-container {
-                margin-bottom: 12px;
-
-                h3 {
-                    font-size: 22px;
-                    color: var.$c-title;
-                    margin-bottom: 4px;
-                }
-
-                p {
-                    font-size: 14px;
-                    color: var.$c-paragraph;
-                }
-            }
-
-            // CTA link
-            a {
-                @include font.font-1(600);
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                font-size: 15px;
-                color: var.$c-project-cta-text;
-                transition: gap 0.3s ease, opacity 0.3s ease;
-
-                &:hover {
-                    gap: 12px;
-                    opacity: 0.8;
-                }
-
-                img {
-                    width: 18px;
-                    height: 18px;
-                }
-            }
-
-            // ---- Position states ----
-            // Card is to the right (next, adjacent)
-            &.right {
-                transform: translateX(100%);
-                opacity: 0;
-                pointer-events: none;
-            }
-
-            // Card is far to the right (hidden queue)
-            &.hid-right {
-                transform: translateX(100%);
-                opacity: 0;
-                pointer-events: none;
-            }
-
-            // Card is to the left (previous, adjacent)
-            &.left {
-                transform: translateX(-100%);
-                opacity: 0;
-                pointer-events: none;
-            }
-
-            // Card is far to the left (hidden queue)
-            &.hid-left {
-                transform: translateX(-100%);
-                opacity: 0;
-                pointer-events: none;
-            }
-        }
-    }
-
-    // ========== CONTROLS (arrows + dots) ==========
-    div.control-container {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 24px;
-        padding: 20px var.$pad-mobile-leftright-section 0;
+        flex-direction: column;
+        gap: 20px;
 
-        // Arrow buttons
-        img.arrow-left,
-        img.arrow-right {
-            width: 44px;
-            height: 44px;
-            padding: 10px;
-            border-radius: 50%;
-            border: 1px solid var.$c-border;
-            background-color: var.$c-cards-background;
-            cursor: pointer;
-            transition: background-color 0.3s ease,
-                        border-color 0.3s ease,
-                        transform 0.2s ease;
+        div.p-cards-container {
+            position: relative;
+            margin-bottom: 0px;
+            overflow: hidden;
+            width: 100%;
+            min-height: 450px;
 
-            &:hover {
-                background-color: var.$c-icons-background;
-                border-color: var.$c-highlight-border;
-                transform: scale(1.1);
-            }
-
-            &:active {
-                transform: scale(0.95);
-            }
-        }
-
-        // Dots / indicators
-        div.points-container {
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 8px;
 
-            div.point {
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                background-color: var.$c-border;
-                transition: background-color 0.3s ease,
-                            transform 0.3s ease,
-                            width 0.3s ease,
-                            border-radius 0.3s ease;
-                cursor: pointer;
-
-                &:hover {
-                    background-color: var.$c-icons-background;
-                }
-
-                // Active dot state (toggled via JS)
-                &.active {
-                    background-color: var.$c-text-highlight;
-                    width: 28px;
-                    border-radius: 6px;
-                    transform: scale(1.05);
-                }
-            }
-        }
-    }
-}
-
-// ==================== DESKTOP ====================
-@media (min-width: 1200px) {
-
-    section.portfolio {
-        padding:
-            var.$pad-desktop-topbottom-section 0 var.$pad-desktop-topbottom-section 0;
-
-        div.section-title-container {
-            gap: var.$gap-desktop-container;
-            margin-bottom: 60px;
-            padding:
-                0 var.$pad-desktop-leftright-section 0 var.$pad-desktop-leftright-section;
-
-            p.section-badge {
-                @include badge.badge-desktop();
-            }
-
-            h2.section-title {
-                font-size: var.$fs-desktop-title;
-            }
-        }
-
-        div.carousel-container {
-            min-height: 520px;
 
             div.p-card {
-                padding: 0 var.$pad-desktop-leftright-section;
+                position: absolute;
 
-                // Limit card width for large screens
-                max-width: 700px;
-                left: 50%;
-                margin-left: -350px; // half of max-width
+                max-width: 400px;
+                border: 2px solid var.$c-highlight-border;
+                overflow: hidden;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                transition: 1s ease;
+                cursor: pointer;
 
-                & > img {
+                border-radius: 16px;
+                border: 4px solid transparent;
+                background:
+                    linear-gradient(135deg, var.$c-cards-2-background, var.$c-cards-background) padding-box,
+                    linear-gradient(135deg, var.$c-highlight-border, var.$c-border) border-box;
+
+                img.card-image {
+                    width: 100%;
                     border-radius: 16px;
-                    margin-bottom: 20px;
                 }
 
                 div.texts-container {
-                    margin-bottom: 16px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
 
                     h3 {
-                        font-size: 28px;
+                        font-size: var.$fs-mobile-title - 10;
+                        color: var.$c-title;
                     }
 
                     p {
-                        font-size: 16px;
+                        @include font.font-2();
+                        font-size: var.$fs-mobile-paragraph - 5;
+                        color: var.$c-paragraph;
                     }
                 }
 
                 a {
-                    font-size: 16px;
+                    @include font.font-1();
+                    font-weight: 800;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    gap: 5px;
+                    color: var.$c-text-highlight;
+
+                    img {
+                        width: 25px;
+                    }
                 }
+            }
+
+            div.p-card.right {
+                transform: translateX(125%);
+                opacity: 0.5;
+            }
+
+            div.p-card.left {
+                transform: translateX(-125%);
+                opacity: 0.5;
+            }
+
+            div.p-card.hid-right {
+                transform: translateX(150%);
+                opacity: 0;
+            }
+
+            div.p-card.hid-left {
+                transform: translateX(-150%);
+                opacity: 0;
             }
         }
 
         div.control-container {
-            gap: 32px;
-            padding-top: 30px;
+            align-self: center;
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
 
-            img.arrow-left,
-            img.arrow-right {
-                width: 52px;
-                height: 52px;
-                padding: 12px;
-            }
+            img {
+                width: 50px;
+                border-radius: 50%;
+                border: 1px solid var.$c-highlight-border;
+                padding: 10px;
+                cursor: pointer;
+                transition: 0.2s ease;
 
-            div.points-container {
-                gap: 10px;
+                &:hover {
+                    background-color: var.$c-button-main-background;
+                }
 
-                div.point {
-                    width: 12px;
-                    height: 12px;
-
-                    &.active {
-                        width: 34px;
-                    }
+                &:active {
+                    transform: scale(0.9);
                 }
             }
+
+            img.arrow-left {}
+
+            div.dots-container {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+                div.dot {
+                    width: 10px;
+                    height: 10px;
+                    background-color: var.$c-badge-background;
+                    border-radius: 50%;
+                }
+
+                div.active {
+                    background-color: var.$c-text-highlight;
+                }
+            }
+
+            img.arrow-right {}
         }
     }
 }
