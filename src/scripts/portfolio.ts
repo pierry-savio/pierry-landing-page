@@ -2,14 +2,31 @@ const arrow_left = document.getElementById("arrow_left");
 const arrow_right = document.getElementById("arrow_right");
 const p_cards = document.getElementsByClassName("p-card");
 const dots = document.getElementsByClassName("dot");
+const dots_container = document.getElementById("dots_container");
 
 let current_index = 0;
 
-function updateDots() {
-    for (let i = 0; i < dots.length; i++) {
-        if (dots[i].classList.contains("active")) {
-            dots[i].classList.remove("active");
+createDots();
+
+function createDots(){
+
+    for (let i = 0; i < p_cards.length; i++){
+        const dot = document.createElement('div');
+        dot.classList.add("dot");
+        if (i == current_index){
+            dot.classList.add("active");
         }
+        dots_container?.appendChild(dot);
+    }
+}
+
+function updateDots() {
+    if (current_index > 0){
+        dots[current_index-1].classList.remove("active");
+    }
+
+    if (current_index < p_cards.length-1){
+        dots[current_index+1].classList.remove("active");
     }
     dots[current_index].classList.add("active");
 }
