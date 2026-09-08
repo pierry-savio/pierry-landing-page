@@ -45,6 +45,8 @@ section.faq{
             display: flex;
             flex-direction: column;
             gap: 0px;
+            cursor: pointer;
+            transition: 0.3s ease;
             
             div.question-title{
                 display: flex;
