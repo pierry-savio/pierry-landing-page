@@ -1,0 +1,86 @@
+@use '../abstracts/variables' as var;
+@use '../base/typography' as font;
+@use '../components/badge' as badge;
+
+section.faq{
+    min-height: 100vh;
+    background-color: var.$c-section-background-3;
+    border-top: 2px solid var.$c-border;
+    border-bottom: 2px solid var.$c-border;
+    padding: 
+        var.$pad-mobile-topbottom-section
+        var.$pad-mobile-leftright-section
+        var.$pad-mobile-topbottom-section
+        var.$pad-mobile-leftright-section;
+
+    div.section-title-container{
+        display: flex;
+        flex-direction: column;
+        gap: var.$gap-mobile-container;
+        margin-bottom: 40px;
+
+        p.section-badge{
+            @include badge.badge-mobile();
+        }
+        h2.section-title{
+            font-size: var.$fs-mobile-title;
+            color: var.$c-title;
+        }
+        p.section-paragraph{
+            font-size: var.$fs-mobile-paragraph;
+            color: var.$c-paragraph;
+            margin-bottom: 20px;
+        }
+    }
+
+    div.questions-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+
+        div.question{
+            border: 1px solid var.$c-border;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            
+            div.question-title{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                h3{
+                    font-size: var.$fs-mobile-title - 16;
+                    color: var.$c-title;
+                }
+                img{
+                    width: 40px;
+                    height: 40px;
+                    transform: rotate(0deg);
+                    transition: 0.3s ease;
+                }
+            }
+            p{
+                overflow: hidden;
+                max-height: 0px;
+                font-size: var.$fs-mobile-paragraph - 5;
+                color: var.$c-paragraph;
+                transition: 0.3s ease;
+            }
+        }
+        div.question.opened{
+            gap: 24px;
+            
+            div.question-title{
+                img{
+                    transform: rotate(90deg);
+                }
+            }
+
+            p{
+                max-height: 80px;
+            }
+        }
+    }
+}
