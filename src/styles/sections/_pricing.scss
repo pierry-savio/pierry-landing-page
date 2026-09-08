@@ -62,7 +62,7 @@ section.pricing{
 
         li{
             @include font.font-2();
-            font-size: var.$fs-mobile-paragraph;
+            font-size: var.$fs-mobile-paragraph - 5;
             width: 100%;
             background-color: var.$c-cards-background;
             padding: 10px;
