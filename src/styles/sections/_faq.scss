@@ -28,8 +28,6 @@ section.faq{
         }
         p.section-paragraph{
             font-size: var.$fs-mobile-paragraph;
-            color: var.$c-paragraph;
-            margin-bottom: 20px;
         }
     }
 
@@ -47,6 +45,7 @@ section.faq{
             gap: 0px;
             cursor: pointer;
             box-shadow: -5px 0 0 0 var.$c-highlight-border;
+            max-height: 80px;
             transition: 0.3s ease;
             
             div.question-title{
@@ -55,7 +54,7 @@ section.faq{
                 align-items: center;
                 h3{
                     font-size: var.$fs-mobile-paragraph;
-                    color: var.$c-text-highlight-2;
+                    color: var.$c-title;
                 }
                 img{
                     width: 40px;
@@ -81,6 +80,7 @@ section.faq{
         }
         div.question.opened{
             gap: 24px;
+            max-height: 500px;
             
             div.question-title{
                 img{
@@ -90,6 +90,62 @@ section.faq{
 
             p{
                 max-height: 80px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px){
+
+    section.faq{
+        padding: 
+            var.$pad-desktop-topbottom-section
+            var.$pad-desktop-leftright-section
+            var.$pad-desktop-topbottom-section
+            var.$pad-desktop-leftright-section;
+
+        div.section-title-container{
+            gap: var.$gap-desktop-container;
+            margin-bottom: 80px;
+
+            p.section-badge{
+                @include badge.badge-desktop();
+            }
+            h2.section-title{
+                font-size: var.$fs-desktop-title;
+            }
+            p.section-paragraph{
+                font-size: var.$fs-desktop-paragraph;
+            }
+        }
+
+        div.questions-container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+
+            div.question{
+                
+                div.question-title{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    h3{
+                        font-size: var.$fs-desktop-paragraph + 5;
+                    }
+                }
+                p{
+                    font-size: var.$fs-desktop-paragraph;
+                }
+            }
+            div.question.opened{
+                gap: 24px;
+                
+                div.question-title{
+                    img{
+                        transform: rotate(90deg);
+                    }
+                }
             }
         }
     }
