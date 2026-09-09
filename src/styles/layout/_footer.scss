@@ -1,0 +1,54 @@
+@use '../abstracts/variables' as var;
+@use '../base/typography' as font;
+@use '../components/badge' as badge;
+
+footer{
+    background-color: var.$c-section-background-1;
+    padding: 
+        var.$pad-mobile-topbottom-section - 50
+        var.$pad-mobile-leftright-section
+        var.$pad-mobile-topbottom-section - 65
+        var.$pad-mobile-leftright-section;
+
+    div.footer-part1{
+        div.logo-container{
+            p.logo{
+                
+            }
+            p.logo-text{
+
+            }
+        }
+
+        ul.sitemap-container{
+            p.sitemap-title{
+
+            }
+            li{
+
+            }
+        }
+
+        ul.suport-container{
+            p.suport-title{
+
+            }
+            li.suport-email{
+
+            }
+            li.suport-whatsapp{
+
+            }
+        }
+    }
+
+    div.horizontal-line{
+
+    }
+
+    div.footer-part2{
+        p{
+
+        }
+    }
+}
