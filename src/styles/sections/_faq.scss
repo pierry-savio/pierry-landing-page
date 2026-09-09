@@ -28,24 +28,24 @@ section.faq{
         }
         p.section-paragraph{
             font-size: var.$fs-mobile-paragraph;
+            color: var.$c-paragraph;
         }
     }
 
     div.questions-container{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        display: flex;
+        flex-direction: column;
         gap: 30px;
 
         div.question{
-            border: 1px solid var.$c-highlight-border;
+            border-bottom: 1px solid var.$c-highlight-border;
             padding: 20px;
-            border-radius: 10px;
             display: flex;
             flex-direction: column;
             gap: 0px;
             cursor: pointer;
-            box-shadow: -5px 0 0 0 var.$c-highlight-border;
             max-height: 80px;
+            width: 100%;
             transition: 0.3s ease;
             
             div.question-title{
@@ -73,6 +73,7 @@ section.faq{
 
             &:hover{
                 transform: scale(1.01);
+                border-bottom: 1px solid white;
             }
             &:active{
                 transform: scale(0.99);
@@ -120,31 +121,16 @@ section.faq{
         }
 
         div.questions-container{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
 
             div.question{
                 
                 div.question-title{
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
                     h3{
                         font-size: var.$fs-desktop-paragraph + 5;
                     }
                 }
                 p{
                     font-size: var.$fs-desktop-paragraph;
-                }
-            }
-            div.question.opened{
-                gap: 24px;
-                
-                div.question-title{
-                    img{
-                        transform: rotate(90deg);
-                    }
                 }
             }
         }
