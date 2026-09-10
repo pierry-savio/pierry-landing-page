@@ -1,0 +1,15 @@
+@use '../abstracts/variables' as var;
+
+@mixin logotype($fs: var.$fs-mobile-header, $fw: 300){
+    p {
+        color: var.$c-header;
+        font-size: $fs;
+        font-weight: $fw;
+
+        span.text-highlight {
+            &:first-of-type {
+                margin-right: 10px;
+            }
+        }
+    }
+}

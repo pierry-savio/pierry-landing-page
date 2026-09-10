@@ -1,54 +1,171 @@
 @use '../abstracts/variables' as var;
 @use '../base/typography' as font;
 @use '../components/badge' as badge;
+@use '../components/logo' as logo;
 
 footer{
     background-color: var.$c-section-background-1;
+    border-top: 1px solid var.$c-border;
     padding: 
         var.$pad-mobile-topbottom-section - 50
         var.$pad-mobile-leftright-section
         var.$pad-mobile-topbottom-section - 65
         var.$pad-mobile-leftright-section;
 
-    div.footer-part1{
-        div.logo-container{
-            p.logo{
-                
-            }
-            p.logo-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
 
+    div.footer-part1{
+
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+
+        div.logo-container{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 15px;
+            
+            @include logo.logotype(24px, 500);
+
+            p.logo-text{
+                font-size: var.$fs-mobile-paragraph - 6;
+                font-weight: 300;
+                color: var.$c-paragraph;
+                @include font.font-2(); 
             }
         }
 
         ul.sitemap-container{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 5px;
+
             p.sitemap-title{
-
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 10px;
             }
-            li{
+            a{
+                li{
+                    font-size: var.$fs-mobile-paragraph - 6;
+                    font-weight: 300;
+                    color: var.$c-paragraph;
+                    @include font.font-2(); 
+                    transition: 0.3s ease;
 
+                    &:hover{
+                        color: var.$c-title;
+                    }
+                }
             }
         }
 
         ul.suport-container{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 5px;
+
             p.suport-title{
-
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 10px;
             }
-            li.suport-email{
-
-            }
-            li.suport-whatsapp{
-
+            a{
+                li{
+                    font-size: var.$fs-mobile-paragraph - 6;
+                    font-weight: 300;
+                    color: var.$c-paragraph;
+                    @include font.font-2(); 
+                }
+                li.suport-email{
+                    color: rgb(79, 129, 158);
+                }
+                li.suport-whatsapp{
+                    color: rgb(79, 158, 87);
+                }
             }
         }
     }
 
     div.horizontal-line{
-
+        height: 1px;
+        width: 100%;
+        background-color: var.$c-border;
+        border-radius: 50px;
     }
 
     div.footer-part2{
         p{
+            font-size: var.$fs-mobile-paragraph - 6;
+            font-weight: 300;
+            color: var.$c-paragraph;
+            @include font.font-2(); 
+        }   
+    }
+}
 
+@media (min-width: 1200px){
+
+    footer{
+        padding: 
+            var.$pad-desktop-topbottom-section - 150
+            var.$pad-desktop-leftright-section - 25
+            var.$pad-desktop-topbottom-section - 150
+            var.$pad-desktop-leftright-section - 25;
+
+        gap: 60px;
+
+        div.footer-part1{
+
+            grid-template-columns: repeat(3, 1fr);
+
+            div.logo-container{
+
+                p.logo-text{
+                    font-size: var.$fs-desktop-paragraph - 6;
+                }
+            }
+
+            ul.sitemap-container{
+
+                align-items: center;
+
+                a{
+                    li{
+                        font-size: var.$fs-desktop-paragraph - 6;
+                    }
+                }
+            }
+
+            ul.suport-container{
+
+                align-items: end;
+
+                a{
+                    li{
+                        font-size: var.$fs-desktop-paragraph - 6;
+                    }
+                }
+            }
+        }
+
+        div.footer-part2{
+            p{
+                font-size: var.$fs-desktop-paragraph - 6;
+            }   
         }
     }
 }

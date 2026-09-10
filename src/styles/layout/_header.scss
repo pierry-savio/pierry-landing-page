@@ -1,5 +1,6 @@
 @use '../abstracts/variables' as variables;
 @use '../components/button' as button;
+@use '../components/logo' as logo;
 
 header {
     display: flex;
@@ -13,16 +14,7 @@ header {
     width: 100%;
 
     a {
-        p {
-            color: variables.$c-header;
-            font-size: variables.$fs-mobile-header;
-
-            span.text-highlight {
-                &:first-of-type {
-                    margin-right: 10px;
-                }
-            }
-        }
+        @include logo.logotype();
     }
 
     // < UL Desktop >
