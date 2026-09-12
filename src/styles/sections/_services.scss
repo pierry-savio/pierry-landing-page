@@ -49,10 +49,6 @@ section.services {
             box-shadow: -5px 0 15px 0 rgba(var.$c-highlight-border, 0.2);
             transition: 0.3s ease;
 
-            &:hover {
-                transform: translateY(-5px) rotate(1deg);
-            }
-
             img {
                 width: 40px;
                 background-color: var.$c-icons-background;
@@ -77,12 +73,19 @@ section.services {
                 font-size: var.$fs-mobile-paragraph + 2;
                 color: var.$c-title;
                 cursor: pointer;
+                border: 1px solid var.$c-highlight-border;
+                padding: 10px;
+                border-radius: 30px;
                 transition: 0.3s ease;
 
                 &:hover {
                     color: var.$c-text-highlight-2;
                     transform: scale(1.02);
                 }
+            }
+
+            &:hover {
+                transform: translateY(-5px);
             }
         }
     }
@@ -99,8 +102,10 @@ section.services {
         z-index: 999;
         background-color: rgba(black, 0.5);
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 10px;
         cursor: pointer;
         transition: 0.5s ease;
 
@@ -110,6 +115,24 @@ section.services {
                 max-height: 800px;
                 transform: translateY(200px);
                 transition: 0.3s ease;
+            }
+        }
+
+        p{
+            text-align: center;
+            text-justify: center;
+            font-size: 25px;
+            padding: 5px;
+            border-radius: 50%;
+            aspect-ratio: 1 / 1;
+            color: var.$c-paragraph;
+            border: 1px solid var.$c-border;
+            transition: 0.3s ease;
+            box-shadow: 0px 0px 10px 0 rgba(#000000, 1);
+
+            &:hover{
+                color: white;
+                border: 1px solid white;
             }
         }
     }

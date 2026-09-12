@@ -42,6 +42,7 @@ section.hero {
                 h1.section-title{
                     font-size: var.$fs-mobile-title;
                     color: var.$c-title;
+                    @include mix.pgl-from-right-in(1s, 50px);
                 }
                 p.section-paragraph{
                     color: var.$c-paragraph;

@@ -37,3 +37,197 @@
         }
     }
 }
+
+// ===== PAGE LOAD ANIMATIONS =====
+
+    // All directions + fade in
+
+        // FROM RIGHT
+        @mixin pgl-from-right($time: 1s, $distance: 50px){
+            animation: from-right $time ease forwards;
+
+            @keyframes from-right {
+                from {
+                    transform: translateX($distance);
+                }
+
+                to{
+                    transform: translateX(0px);
+                }
+            }
+        }
+
+        // FROM RIGHT IN
+        @mixin pgl-from-right-in($time: 1s, $distance: 50px){
+            animation: from-right-in $time ease forwards;
+
+            @keyframes from-right-in {
+                from {
+                    transform: translateX($distance);
+                    opacity: 0;
+                }
+
+                to{
+                    transform: translateX(0px);
+                    opacity: 1;
+                }
+            }
+        }
+
+        // FROM LEFT
+        @mixin pgl-from-left($time: 1s, $distance: 50px){
+            animation: from-left $time ease forwards;
+
+            @keyframes from-left {
+                from {
+                    transform: translateX(-$distance);
+                }
+
+                to{
+                    transform: translateX(0px);
+                }
+            }
+        }
+
+        // FROM LEFT IN
+        @mixin pgl-from-left-in($time: 1s, $distance: 50px){
+            animation: from-left-in $time ease forwards;
+
+            @keyframes from-left-in {
+                from {
+                    transform: translateX(-$distance);
+                    opacity: 0;
+                }
+
+                to{
+                    transform: translateX(0px);
+                    opacity: 1;
+                }
+            }
+        }
+
+        // FROM TOP
+        @mixin pgl-from-top ($time: 1s, $distance: 50px){
+            animation: from-top $time ease forwards;
+
+            @keyframes from-top {
+                from {
+                    transform: translateY(-$distance);
+                }
+
+                to{
+                    transform: translateY(0px);
+                }
+            }
+        }
+
+        // FROM TOP IN
+        @mixin pgl-from-top-in($time: 1s, $distance: 50px){
+            animation: from-top-in $time ease forwards;
+
+            @keyframes from-top-in {
+                from {
+                    transform: translateY(-$distance);
+                    opacity: 0;
+                }
+
+                to{
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+            }
+        }
+
+        // FROM BOTTOM
+        @mixin pgl-from-bottom ($time: 1s, $distance: 50px){
+            animation: from-bottom $time ease forwards;
+
+            @keyframes from-bottom {
+                from {
+                    transform: translateY($distance);
+                }
+
+                to{
+                    transform: translateY(0px);
+                }
+            }
+        }
+
+        // FROM TOP IN
+        @mixin pgl-from-bottom-in($time: 1s, $distance: 50px){
+            animation: from-bottom-in $time ease forwards;
+
+            @keyframes from-bottom-in {
+                from {
+                    transform: translateY($distance);
+                    opacity: 0;
+                }
+
+                to{
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+            }
+        }
+    
+    //Rotate animations
+
+        //FLIP Y
+        @mixin pgl-flip-y($time: 1s, $deg: 360deg){
+            animation: pgl-flip-y $time ease forwards;
+
+            @keyframes pgl-flip-y{
+                from{
+                    transform: rotateY($deg);
+                }
+                to{
+                    transform: rotateY(0);
+                }
+            }
+        }
+
+        //FLIP Y IN
+        @mixin pgl-flip-y-in($time: 1s, $deg: 360deg){
+            animation: pgl-flip-y-in $time ease forwards;
+
+            @keyframes pgl-flip-y-in{
+                from{
+                    transform: rotateY($deg);
+                    opacity: 0;
+                }
+                to{
+                    transform: rotateY(0);
+                    opacity: 1;
+                }
+            }
+        }
+
+        //FLIP X
+        @mixin pgl-flip-x($time: 1s, $deg: 360deg){
+            animation: pgl-flip-x $time ease forwards;
+
+            @keyframes pgl-flip-x{
+                from{
+                    transform: rotateX($deg);
+                }
+                to{
+                    transform: rotateX(0);
+                }
+            }
+        }
+
+        //FLIP X IN
+        @mixin pgl-flip-x-in($time: 1s, $deg: 360deg){
+            animation: pgl-flip-x-in $time ease forwards;
+
+            @keyframes pgl-flip-x-in{
+                from{
+                    transform: rotateX($deg);
+                    opacity: 0;
+                }
+                to{
+                    transform: rotateX(0);
+                    opacity: 1;
+                }
+            }
+        }
