@@ -21,9 +21,9 @@
 
 @mixin floating-2 ($time: 1s, $distance: -5px) {
 
-    animation: floating $time linear infinite;
+    animation: floating-2 $time linear infinite;
 
-    @keyframes floating {
+    @keyframes floating-2 {
         0% {
             transform: translateY(0px);
         }
@@ -37,16 +37,13 @@
         }
     }
 }
-
-// ===== PAGE LOAD ANIMATIONS =====
-
     // All directions + fade in
 
         // FROM RIGHT
-        @mixin pgl-from-right($time: 1s, $distance: 50px){
-            animation: from-right $time ease forwards;
+        @mixin pgl-from-right($name, $time: 1s, $distance: 50px, $delay: 0s){
+            animation: #{$name} $time ease $delay forwards;
 
-            @keyframes from-right {
+            @keyframes #{$name} {
                 from {
                     transform: translateX($distance);
                 }
@@ -58,10 +55,10 @@
         }
 
         // FROM RIGHT IN
-        @mixin pgl-from-right-in($time: 1s, $distance: 50px){
-            animation: from-right-in $time ease forwards;
+        @mixin pgl-from-right-in($name, $time: 1s, $distance: 50px, $delay: 0s){
+            animation: #{$name} $time ease $delay forwards;
 
-            @keyframes from-right-in {
+            @keyframes #{$name} {
                 from {
                     transform: translateX($distance);
                     opacity: 0;
@@ -75,10 +72,10 @@
         }
 
         // FROM LEFT
-        @mixin pgl-from-left($time: 1s, $distance: 50px){
-            animation: from-left $time ease forwards;
+        @mixin pgl-from-left($name, $time: 1s, $distance: 50px, $delay: 0s){
+            animation: #{$name} $time ease $delay forwards;
 
-            @keyframes from-left {
+            @keyframes #{$name} {
                 from {
                     transform: translateX(-$distance);
                 }
@@ -90,10 +87,10 @@
         }
 
         // FROM LEFT IN
-        @mixin pgl-from-left-in($time: 1s, $distance: 50px){
-            animation: from-left-in $time ease forwards;
+        @mixin pgl-from-left-in($name, $time: 1s, $distance: 50px, $delay: 0s){
+            animation: #{$name} $time ease $delay forwards;
 
-            @keyframes from-left-in {
+            @keyframes #{$name} {
                 from {
                     transform: translateX(-$distance);
                     opacity: 0;
@@ -107,10 +104,10 @@
         }
 
         // FROM TOP
-        @mixin pgl-from-top ($time: 1s, $distance: 50px){
-            animation: from-top $time ease forwards;
+        @mixin pgl-from-top ($name, $time: 1s, $distance: 50px, $delay: 0s){
+            animation: #{$name} $time ease $delay forwards;
 
-            @keyframes from-top {
+            @keyframes #{$name} {
                 from {
                     transform: translateY(-$distance);
                 }
@@ -122,10 +119,10 @@
         }
 
         // FROM TOP IN
-        @mixin pgl-from-top-in($time: 1s, $distance: 50px){
-            animation: from-top-in $time ease forwards;
+        @mixin pgl-from-top-in($name, $time: 1s, $distance: 50px, $delay: 0s){
+            animation: #{$name} $time ease $delay forwards;
 
-            @keyframes from-top-in {
+            @keyframes #{$name} {
                 from {
                     transform: translateY(-$distance);
                     opacity: 0;
@@ -139,10 +136,10 @@
         }
 
         // FROM BOTTOM
-        @mixin pgl-from-bottom ($time: 1s, $distance: 50px){
-            animation: from-bottom $time ease forwards;
+        @mixin pgl-from-bottom ($name, $time: 1s, $distance: 50px, $delay: 0s){
+            animation: #{$name} $time ease $delay forwards;
 
-            @keyframes from-bottom {
+            @keyframes #{$name} {
                 from {
                     transform: translateY($distance);
                 }
@@ -153,11 +150,11 @@
             }
         }
 
-        // FROM TOP IN
-        @mixin pgl-from-bottom-in($time: 1s, $distance: 50px){
-            animation: from-bottom-in $time ease forwards;
+        // FROM BOTTOM IN
+        @mixin pgl-from-bottom-in($name, $time: 1s, $distance: 50px, $delay: 0s){
+            animation: #{$name} $time ease $delay forwards;
 
-            @keyframes from-bottom-in {
+            @keyframes #{$name} {
                 from {
                     transform: translateY($distance);
                     opacity: 0;
@@ -169,14 +166,14 @@
                 }
             }
         }
-    
+
     //Rotate animations
 
         //FLIP Y
-        @mixin pgl-flip-y($time: 1s, $deg: 360deg){
-            animation: pgl-flip-y $time ease forwards;
+        @mixin pgl-flip-y($name, $time: 1s, $deg: 360deg, $delay: 0s){
+            animation: #{$name} $time ease $delay forwards;
 
-            @keyframes pgl-flip-y{
+            @keyframes #{$name} {
                 from{
                     transform: rotateY($deg);
                 }
@@ -187,10 +184,10 @@
         }
 
         //FLIP Y IN
-        @mixin pgl-flip-y-in($time: 1s, $deg: 360deg){
-            animation: pgl-flip-y-in $time ease forwards;
+        @mixin pgl-flip-y-in($name, $time: 1s, $deg: 360deg, $delay: 0s){
+            animation: #{$name} $time ease $delay forwards;
 
-            @keyframes pgl-flip-y-in{
+            @keyframes #{$name} {
                 from{
                     transform: rotateY($deg);
                     opacity: 0;
@@ -203,10 +200,10 @@
         }
 
         //FLIP X
-        @mixin pgl-flip-x($time: 1s, $deg: 360deg){
-            animation: pgl-flip-x $time ease forwards;
+        @mixin pgl-flip-x($name, $time: 1s, $deg: 360deg, $delay: 0s){
+            animation: #{$name} $time ease $delay forwards;
 
-            @keyframes pgl-flip-x{
+            @keyframes #{$name} {
                 from{
                     transform: rotateX($deg);
                 }
@@ -217,10 +214,10 @@
         }
 
         //FLIP X IN
-        @mixin pgl-flip-x-in($time: 1s, $deg: 360deg){
-            animation: pgl-flip-x-in $time ease forwards;
+        @mixin pgl-flip-x-in($name, $time: 1s, $deg: 360deg, $delay: 0s){
+            animation: #{$name} $time ease $delay forwards;
 
-            @keyframes pgl-flip-x-in{
+            @keyframes #{$name} {
                 from{
                     transform: rotateX($deg);
                     opacity: 0;
@@ -234,16 +231,32 @@
 
     //Scale animations
 
-        //Scale up
-        @mixin pgl-scale-from-up($time: 1s, $scale: 1.5){
-            animation: pgl-scale-from-up $time ease forwards;
+        //Scale
+        @mixin pgl-scale($name, $time: 1s, $scale: 1.5, $delay: 0s){
+            animation: #{$name} $time ease $delay forwards;
 
-            @keyframes pgl-scale-from-up{
+            @keyframes #{$name} {
                 from{
                     transform: scale($scale);
                 }
                 to{
                     transform: scale(1);
+                }
+            }
+        }
+
+        //Scale in
+        @mixin pgl-scale-in($name, $time: 1s, $scale: 1.5, $delay: 0s){
+            animation: #{$name} $time ease $delay forwards;
+
+            @keyframes #{$name} {
+                from{
+                    transform: scale($scale);
+                    opacity: 0;
+                }
+                to{
+                    transform: scale(1);
+                    opacity: 1;
                 }
             }
         }

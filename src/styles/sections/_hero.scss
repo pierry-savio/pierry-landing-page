@@ -42,18 +42,19 @@ section.hero {
                 h1.section-title{
                     font-size: var.$fs-mobile-title;
                     color: var.$c-title;
-                    @include mix.pgl-scale-from-up(1s, 2);
+                    @include mix.pgl-scale-in(title-animation, 1s, 1.2);
                 }
                 p.section-paragraph{
                     color: var.$c-paragraph;
                     font-size: var.$fs-mobile-paragraph;
                     line-height: 25px;
+                    @include mix.pgl-from-bottom-in(paragraph-animation, 1s, 30px);
                 }
             }
 
             //Container dos botões da hero
             div.buttons-container{
-
+                @include mix.pgl-scale-in(buttons-container-animation, 1s, 0.8);
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
