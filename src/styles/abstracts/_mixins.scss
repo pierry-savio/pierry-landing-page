@@ -231,3 +231,19 @@
                 }
             }
         }
+
+    //Scale animations
+
+        //Scale up
+        @mixin pgl-scale-from-up($time: 1s, $scale: 1.5){
+            animation: pgl-scale-from-up $time ease forwards;
+
+            @keyframes pgl-scale-from-up{
+                from{
+                    transform: scale($scale);
+                }
+                to{
+                    transform: scale(1);
+                }
+            }
+        }
