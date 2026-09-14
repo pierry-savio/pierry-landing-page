@@ -2,6 +2,7 @@
 @use '../components/badge' as badge;
 @use '../base/typography' as font;
 @use '../components/button' as btn;
+@use '../abstracts/mixins' as mix;
 
 section.process{
 
@@ -83,6 +84,26 @@ section.process{
                 }
             }
         }
+        div.step1{
+            @include mix.pgl-from-left-in(step1-animation, 1s, 100px);
+            animation-timeline: view();
+            animation-range: 0% 10%;
+        }
+        div.step2{
+            @include mix.pgl-from-left-in(step2-animation, 1s, 100px);
+            animation-timeline: view();
+            animation-range: 0% 20%;
+        }
+        div.step3{
+            @include mix.pgl-from-left-in(step3-animation, 1s, 100px);
+            animation-timeline: view();
+            animation-range: 0% 30%;
+        }
+        div.step4{
+            @include mix.pgl-from-left-in(step4-animation, 1s, 100px);
+            animation-timeline: view();
+            animation-range: 0% 40%;
+        }
     }
 
     //CTA
@@ -90,6 +111,11 @@ section.process{
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include mix.pgl-scale-in(cta-btn-animation, 1s, 0.8);
+        animation-timeline: view();
+        animation-range: 0% 25%;
+
         a{
             @include btn.button();
             @include font.font-1();
@@ -157,6 +183,26 @@ section.process{
                         font-size: var.$fs-desktop-paragraph - 5px;
                     }
                 }
+            }
+            div.step1{
+                @include mix.pgl-from-bottom-in(step1-bottom-animation, 1s, 100px);
+                animation-timeline: view();
+                animation-range: 0% 10%;
+            }
+            div.step2{
+                @include mix.pgl-from-bottom-in(step2-bottom-animation, 1s, 100px);
+                animation-timeline: view();
+                animation-range: 0% 20%;
+            }
+            div.step3{
+                @include mix.pgl-from-bottom-in(step3-bottom-animation, 1s, 100px);
+                animation-timeline: view();
+                animation-range: 0% 30%;
+            }
+            div.step4{
+                @include mix.pgl-from-bottom-in(step4-bottom-animation, 1s, 100px);
+                animation-timeline: view();
+                animation-range: 0% 40%;
             }
         }
 

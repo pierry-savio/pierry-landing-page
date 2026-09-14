@@ -41,6 +41,8 @@ section.services {
             background-color: var.$c-cards-background;
             padding: var.$pad-mobile-cards;
             display: flex;
+            justify-content: space-between;
+            align-items: start;
             flex-direction: column;
             gap: var.$gap-mobile-container - 10;
             border-radius: 0px;
@@ -76,6 +78,7 @@ section.services {
                 border: 1px solid var.$c-highlight-border;
                 padding: 10px;
                 border-radius: 30px;
+                width: 100%;
                 transition: 0.3s ease;
 
                 &:hover {
@@ -87,6 +90,48 @@ section.services {
             &:hover {
                 transform: translateY(-5px);
             }
+        }
+
+
+        div.card1{
+            @include mix.pgl-from-bottom-in(card1-animation, 1s, 100px);
+            animation-timeline: view();
+            animation-range: 0% 20%;
+        }
+        div.card2{
+            @include mix.pgl-from-bottom-in(card2-animation, 1s, 100px);
+            animation-timeline: view();
+            animation-range: 0% 40%;
+        }
+        div.card3{
+            @include mix.pgl-from-bottom-in(card3-animation, 1s, 100px);
+            animation-timeline: view();
+            animation-range: 0% 60%;
+        }
+        div.card4{
+            @include mix.pgl-from-bottom-in(card4-animation, 1s, 100px);
+            animation-timeline: view();
+            animation-range: 0% 20%;
+        }
+        div.card5{
+            @include mix.pgl-from-bottom-in(card5-animation, 1s, 100px);
+            animation-timeline: view();
+            animation-range: 0% 40%;
+        }
+        div.card6{
+            @include mix.pgl-from-bottom-in(card6-animation, 1s, 100px);
+            animation-timeline: view();
+            animation-range: 0% 60%;
+        }
+        div.card7{
+            @include mix.pgl-from-bottom-in(card7-animation, 1s, 100px);
+            animation-timeline: view();
+            animation-range: 0% 40%;
+        }
+        div.card8{
+            @include mix.pgl-from-bottom-in(card8-animation, 1s, 100px);
+            animation-timeline: view();
+            animation-range: 0% 60%;
         }
     }
 

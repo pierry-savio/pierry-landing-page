@@ -2,6 +2,7 @@
 @use '../base/typography' as font;
 @use '../components/badge' as badge;
 @use '../components/button' as btn;
+@use '../abstracts/mixins' as mix;
 
 section.pricing{
     min-height: 100vh;
@@ -75,6 +76,10 @@ section.pricing{
             gap: 5px;
             transition: 0.3s ease;
 
+            @include mix.pgl-from-bottom-in(include-bottom-animation, 1s, 100px);
+            animation-timeline: view();
+            animation-range: 0% 30%;
+
             img{
                 width: 30px;
             }
@@ -126,6 +131,9 @@ section.pricing{
             li{
                 gap: 10px;
                 font-size: var.$fs-desktop-paragraph;
+                @include mix.pgl-from-right-in(include-right-animation, 1s, 100px);
+                animation-timeline: view();
+                animation-range: 0% 30%;
             }
         }
 

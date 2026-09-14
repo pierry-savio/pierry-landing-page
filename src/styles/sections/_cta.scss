@@ -2,6 +2,7 @@
 @use '../base/typography' as font;
 @use '../components/badge' as badge;
 @use '../components/button' as btn;
+@use '../abstracts/mixins' as mix;
 
 section.cta{
     background-color: var.$c-section-background-3;
@@ -10,6 +11,10 @@ section.cta{
         var.$pad-mobile-leftright-section
         var.$pad-mobile-topbottom-section
         var.$pad-mobile-leftright-section;
+
+    @include mix.pgl-from-left-in(cta-section-animation, 1s, 500px);
+    animation-timeline: view();
+    animation-range: 0% 50%;
     
     div.section-title-container{
         display: flex;
