@@ -1,6 +1,7 @@
 @use '../abstracts/variables' as variables;
 @use '../components/button' as button;
 @use '../components/logo' as logo;
+@use '../abstracts/mixins' as mix;
 
 header {
     display: flex;
@@ -54,6 +55,21 @@ header {
             &:hover::after {
                 transform: scaleX(1);
             }
+        }
+        a.a1-desktop{
+            @include mix.pgl-from-bottom-in(a1-animation, 1s, 30px, 0.2s);
+        }
+        a.a2-desktop{
+            @include mix.pgl-from-bottom-in(a1-animation, 1s, 30px, 0.4s);
+        }
+        a.a3-desktop{
+            @include mix.pgl-from-bottom-in(a1-animation, 1s, 30px, 0.6s);
+        }
+        a.a4-desktop{
+            @include mix.pgl-from-bottom-in(a1-animation, 1s, 30px, 0.8s);
+        }
+        a.a5-desktop{
+            @include mix.pgl-from-bottom-in(a1-animation, 1s, 30px, 1s);
         }
     }
 

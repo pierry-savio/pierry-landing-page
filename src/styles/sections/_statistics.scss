@@ -1,10 +1,15 @@
 @use '../abstracts/variables' as var;
 @use '../base/typography' as font;
+@use '../abstracts/mixins' as mix;
 
 section.trust{
     background-color: var.$c-section-background-3;
     border-top: 2px solid var.$c-border;
     border-bottom: 2px solid var.$c-border;
+	
+    @include mix.pgl-from-bottom-in(trust-animation, 1s, 500px);
+    animation-timeline: view();
+    animation-range: 0% 45%;
 
     padding: 
         var.$pad-mobile-topbottom-section - 50

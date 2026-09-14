@@ -38,6 +38,7 @@ section.hero {
 
                 p.section-badge{
                     @include comp.badge-mobile();
+                    @include mix.pgl-from-top-in(badge-animation, 1s, 30px)
                 }
                 h1.section-title{
                     font-size: var.$fs-mobile-title;
@@ -119,6 +120,7 @@ section.hero {
                     gap: 10px;
                     img{
                         width: 25px;
+                        @include mix.pgl-flip-y-in(stars-animation, 1s, 360deg);
                         transition: 0.3s ease;
 
                         &:hover{
@@ -131,6 +133,7 @@ section.hero {
                 p{
                     font-size: var.$fs-mobile-paragraph;
                     color: var.$c-paragraph;
+                    @include mix.pgl-from-right-in(stats-paragraph-animation, 1s, 50px);
 
                 }
             }
@@ -138,7 +141,8 @@ section.hero {
         img.computer{
             width: 90%;
             max-width: 500px;
-            @include mix.floating(5s, 15px);
+            @include mix.pgl-flip-y-in(computer-animation, 1s, 30deg);
+            //@include mix.floating(5s, 15px);
         }
     }
 }
