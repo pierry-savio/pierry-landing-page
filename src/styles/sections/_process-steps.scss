@@ -85,22 +85,22 @@ section.process{
             }
         }
         div.step1{
-            @include mix.pgl-from-left-in(step1-animation, 1s, 100px);
+            @include mix.pgl-from-left-in(step1-animation, 1s, 20px);
             animation-timeline: view();
             animation-range: 0% 10%;
         }
         div.step2{
-            @include mix.pgl-from-left-in(step2-animation, 1s, 100px);
+            @include mix.pgl-from-left-in(step2-animation, 1s, 20px);
             animation-timeline: view();
             animation-range: 0% 20%;
         }
         div.step3{
-            @include mix.pgl-from-left-in(step3-animation, 1s, 100px);
+            @include mix.pgl-from-left-in(step3-animation, 1s, 20px);
             animation-timeline: view();
             animation-range: 0% 30%;
         }
         div.step4{
-            @include mix.pgl-from-left-in(step4-animation, 1s, 100px);
+            @include mix.pgl-from-left-in(step4-animation, 1s, 20px);
             animation-timeline: view();
             animation-range: 0% 40%;
         }
