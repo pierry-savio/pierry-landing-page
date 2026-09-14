@@ -142,7 +142,7 @@ section.hero {
             width: 90%;
             max-width: 500px;
             @include mix.pgl-flip-y-in(computer-animation, 1s, 30deg);
-            //@include mix.floating(5s, 15px);
+            @include mix.floating(5s, 15px);
         }
     }
 }

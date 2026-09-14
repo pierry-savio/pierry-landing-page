@@ -7,9 +7,9 @@ section.trust{
     border-top: 2px solid var.$c-border;
     border-bottom: 2px solid var.$c-border;
 	
-    @include mix.pgl-from-bottom-in(trust-animation, 1s, 500px);
+    @include mix.pgl-from-bottom-in(trust-animation, 1s, 300px);
     animation-timeline: view();
-    animation-range: 0% 45%;
+    animation-range: 0% 40%;
 
     padding: 
         var.$pad-mobile-topbottom-section - 50
