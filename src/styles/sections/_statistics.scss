@@ -10,7 +10,7 @@ section.trust{
     //Scroll driven animation
     @include mix.pgl-from-bottom-in(trust-animation, 1s, 300px);
     animation-timeline: view();
-    animation-range: 0% 40%;
+    animation-range: 0% 50%;
 
     padding: 
         var.$pad-mobile-topbottom-section - 50

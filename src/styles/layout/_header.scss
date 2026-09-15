@@ -26,6 +26,7 @@ header {
         a {
             position: relative;
             display: inline-block;
+            opacity: 0;
 
             li {
                 color: variables.$c-paragraph;

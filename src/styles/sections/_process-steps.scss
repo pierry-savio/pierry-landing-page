@@ -196,17 +196,17 @@ section.process{
             div.step2{
                 @include mix.pgl-from-bottom-in(step2-bottom-animation, 1s, 100px);
                 animation-timeline: view();
-                animation-range: 0% 20%;
+                animation-range: 0% 25%;
             }
             div.step3{
                 @include mix.pgl-from-bottom-in(step3-bottom-animation, 1s, 100px);
                 animation-timeline: view();
-                animation-range: 0% 30%;
+                animation-range: 0% 40%;
             }
             div.step4{
                 @include mix.pgl-from-bottom-in(step4-bottom-animation, 1s, 100px);
                 animation-timeline: view();
-                animation-range: 0% 40%;
+                animation-range: 0% 55%;
             }
         }
 
