@@ -41,7 +41,7 @@
 
         // FROM RIGHT
         @mixin pgl-from-right($name, $time: 1s, $distance: 50px, $delay: 0s){
-            animation: #{$name} $time ease $delay forwards;
+            animation: #{$name} $time ease $delay both;
 
             @keyframes #{$name} {
                 from {
@@ -56,7 +56,7 @@
 
         // FROM RIGHT IN
         @mixin pgl-from-right-in($name, $time: 1s, $distance: 50px, $delay: 0s){
-            animation: #{$name} $time ease $delay forwards;
+            animation: #{$name} $time ease $delay both;
 
             @keyframes #{$name} {
                 from {
@@ -73,7 +73,7 @@
 
         // FROM LEFT
         @mixin pgl-from-left($name, $time: 1s, $distance: 50px, $delay: 0s){
-            animation: #{$name} $time ease $delay forwards;
+            animation: #{$name} $time ease $delay both;
 
             @keyframes #{$name} {
                 from {
@@ -88,7 +88,7 @@
 
         // FROM LEFT IN
         @mixin pgl-from-left-in($name, $time: 1s, $distance: 50px, $delay: 0s){
-            animation: #{$name} $time ease $delay forwards;
+            animation: #{$name} $time ease $delay both;
 
             @keyframes #{$name} {
                 from {
@@ -105,7 +105,7 @@
 
         // FROM TOP
         @mixin pgl-from-top ($name, $time: 1s, $distance: 50px, $delay: 0s){
-            animation: #{$name} $time ease $delay forwards;
+            animation: #{$name} $time ease $delay both;
 
             @keyframes #{$name} {
                 from {
@@ -120,7 +120,7 @@
 
         // FROM TOP IN
         @mixin pgl-from-top-in($name, $time: 1s, $distance: 50px, $delay: 0s){
-            animation: #{$name} $time ease $delay forwards;
+            animation: #{$name} $time ease $delay both;
 
             @keyframes #{$name} {
                 from {
@@ -137,7 +137,7 @@
 
         // FROM BOTTOM
         @mixin pgl-from-bottom ($name, $time: 1s, $distance: 50px, $delay: 0s){
-            animation: #{$name} $time ease $delay forwards;
+            animation: #{$name} $time ease $delay both;
 
             @keyframes #{$name} {
                 from {
@@ -152,7 +152,7 @@
 
         // FROM BOTTOM IN
         @mixin pgl-from-bottom-in($name, $time: 1s, $distance: 50px, $delay: 0s){
-            animation: #{$name} $time ease $delay forwards;
+            animation: #{$name} $time ease $delay both;
 
             @keyframes #{$name} {
                 from {
@@ -171,7 +171,7 @@
 
         //FLIP Y
         @mixin pgl-flip-y($name, $time: 1s, $deg: 360deg, $delay: 0s){
-            animation: #{$name} $time ease $delay forwards;
+            animation: #{$name} $time ease $delay both;
 
             @keyframes #{$name} {
                 from{
@@ -185,7 +185,7 @@
 
         //FLIP Y IN
         @mixin pgl-flip-y-in($name, $time: 1s, $deg: 360deg, $delay: 0s){
-            animation: #{$name} $time ease $delay forwards;
+            animation: #{$name} $time ease $delay both;
 
             @keyframes #{$name} {
                 from{
@@ -201,7 +201,7 @@
 
         //FLIP X
         @mixin pgl-flip-x($name, $time: 1s, $deg: 360deg, $delay: 0s){
-            animation: #{$name} $time ease $delay forwards;
+            animation: #{$name} $time ease $delay both;
 
             @keyframes #{$name} {
                 from{
@@ -215,7 +215,7 @@
 
         //FLIP X IN
         @mixin pgl-flip-x-in($name, $time: 1s, $deg: 360deg, $delay: 0s){
-            animation: #{$name} $time ease $delay forwards;
+            animation: #{$name} $time ease $delay both;
 
             @keyframes #{$name} {
                 from{
@@ -233,7 +233,7 @@
 
         //Scale
         @mixin pgl-scale($name, $time: 1s, $scale: 1.5, $delay: 0s){
-            animation: #{$name} $time ease $delay forwards;
+            animation: #{$name} $time ease $delay both;
 
             @keyframes #{$name} {
                 from{
@@ -247,7 +247,7 @@
 
         //Scale in
         @mixin pgl-scale-in($name, $time: 1s, $scale: 1.5, $delay: 0s){
-            animation: #{$name} $time ease $delay forwards;
+            animation: #{$name} $time ease $delay both;
 
             @keyframes #{$name} {
                 from{
