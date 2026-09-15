@@ -1,6 +1,11 @@
 const popup = document.getElementById("popup");
 const phoneImage = document.getElementById("phone_image") as HTMLImageElement;
 
+const images = import.meta.glob<{ default: string }>(
+    "/src/assets/images/services/*.png",
+    { eager: true }
+);
+
 const cards: Record<string, string> = {
     card_porfolio: "porfolio-online.png",
     card_linktree: "linktree.png",
@@ -14,7 +19,8 @@ const cards: Record<string, string> = {
 
 Object.entries(cards).forEach(([id, image]) => {
     document.getElementById(id)?.addEventListener("click", () => {
-        phoneImage.src = `./src/assets/images/services/${image}`;
+        const path = `/src/assets/images/services/${image}`;
+        phoneImage.src = images[path]?.default ?? "";
         popup?.classList.add("open");
     });
 });
