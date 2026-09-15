@@ -142,6 +142,10 @@ section.process{
             margin-bottom: 80px;
             gap: var.$gap-desktop-container;
 
+            p.section-badge {
+                @include badge.badge-desktop();
+            }
+
             h2.section-title {
                 font-size: var.$fs-desktop-title;
             }
