@@ -11,7 +11,8 @@
 </p>
 
 <p align="center">
-  <a href="https://pierry.com.br"><strong>🔗 pierry.com.br</strong></a>
+  Demonstração: 
+  <a href="https://pierry.com.br"><strong>🔗pierry.com.br</strong></a>
 </p>
 
 ## 💭 Sobre o projeto
