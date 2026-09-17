@@ -1,9 +1,8 @@
-# Pierry Landing Page
+# 💻 pierry.com.br
 
 <p align="center">
-  <!-- Substitua COLE_AQUI_O_LINK_DA_IMAGEM pela URL ou caminho da sua imagem/GIF de demonstração. -->
   <a href="https://pierry.com.br">
-    <img src="COLE_AQUI_O_LINK_DA_IMAGEM" alt="Demonstração da Pierry Landing Page" width="100%">
+    <img src="./src/assets/images/preview.png" alt="Demonstração da Pierry Landing Page" width="100%">
   </a>
 </p>
 
@@ -12,14 +11,14 @@
 </p>
 
 <p align="center">
-  <a href="https://pierry.com.br"><strong>Ver demonstração ao vivo</strong></a>
+  <a href="https://pierry.com.br"><strong>🔗 pierry.com.br</strong></a>
 </p>
 
-## Sobre o projeto
+## 💭 Sobre o projeto
 
 Esta é a página institucional da **Pierry.dev**, voltada a profissionais liberais, clínicas, comércios locais, infoprodutores e outros negócios que precisam fortalecer a presença digital. O site conduz o visitante da proposta de valor ao contato pelo WhatsApp, com uma estrutura pensada para apresentar serviços e gerar pedidos de orçamento.
 
-## Funcionalidades
+## 🚀 Funcionalidades
 
 - Navegação por âncoras entre as seções da página e menu adaptado para dispositivos móveis.
 - CTAs de contato integrados ao WhatsApp.
@@ -28,16 +27,22 @@ Esta é a página institucional da **Pierry.dev**, voltada a profissionais liber
 - Portfólio em carrossel com links para projetos publicados.
 - FAQ interativo com dúvidas recorrentes sobre prazos, pagamento, revisões, domínio e hospedagem.
 - Layout responsivo para desktop e mobile.
+- Rolagem suave com **Lenis**.
+- Animações visuais feitas com **p5.js** e efeitos guiados pelo progresso da rolagem (*scroll-driven animations*).
 - Rodapé com e-mail, WhatsApp e atalhos de navegação.
 
-## Tecnologias utilizadas
+## ⚙ Tecnologias utilizadas
 
+- **Vite** como ferramenta de desenvolvimento e build.
 - **HTML5** para a estrutura semântica da página.
-- **CSS3** para estilização e responsividade.
+- **SCSS** para estilização, organização dos estilos e responsividade.
 - **TypeScript** para os comportamentos do menu, serviços, portfólio e FAQ.
+- **Lenis** para a rolagem suave.
+- **p5.js** para animações visuais.
+- **Scroll-driven animations** para efeitos acionados pelo progresso da rolagem.
 - **Google Fonts**: [Outfit](https://fonts.google.com/specimen/Outfit) e [JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono).
 
-## Estrutura esperada
+## 🔨 Estrutura esperada
 
 ```text
 .
@@ -57,9 +62,9 @@ Esta é a página institucional da **Pierry.dev**, voltada a profissionais liber
         └── service.ts
 ```
 
-## Como executar localmente
+## 💾 Como executar localmente
 
-Como os scripts são módulos TypeScript (`.ts`), execute o projeto usando o ambiente de desenvolvimento configurado no repositório — por exemplo, Vite ou ferramenta equivalente. Se o projeto possuir os scripts convencionais no `package.json`, utilize:
+O projeto utiliza Vite. Instale as dependências e inicie o servidor de desenvolvimento:
 
 ```bash
 npm install
@@ -68,7 +73,7 @@ npm run dev
 
 Depois, abra no navegador a URL exibida pelo servidor local.
 
-## Serviços apresentados
+## 💼 Serviços apresentados
 
 - Sites institucionais
 - Portfólios online
@@ -79,7 +84,7 @@ Depois, abra no navegador a URL exibida pelo servidor local.
 - Páginas de aniversário
 - Páginas de eventos
 
-## Contato
+## ✉ Contato
 
 - Site: [pierry.com.br](https://pierry.com.br)
 - WhatsApp: [(11) 97483-8207](https://wa.me/5511974838207)
