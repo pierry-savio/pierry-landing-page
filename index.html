@@ -17,7 +17,7 @@
   <link rel="icon" type="image/png" href="./src/assets/images/icons/favicon.png">
   
   <style>
-    #popup:not(.open) {
+    #popup:not(.opened) {
       opacity: 0;
       pointer-events: none;
     }
@@ -200,7 +200,7 @@
           <p class="card-paragraph">Exponha seus trabalhos e projetos de forma interativa, criativa e altamente visual.
           </p>
 
-          <div class="example" id="card_porfolio">
+          <div class="example" id="card_portfolio">
             Ver exemplar
           </div>
         </div>
@@ -272,8 +272,15 @@
       </div>
 
       <div class="popup-background" id="popup">
-        <div class="phone">
-          <img src="./src/assets/images/services/pagina-de-evento.png" alt="Exemplar de serviço" id="phone_image">
+        <div class="phone" id="phone">
+          <img src="./src/assets/images/services/site-institucional.png"    alt="Exemplar de serviço" id="inst_img">
+          <img src="./src/assets/images/services/porfolio-online.png"       alt="Exemplar de serviço" id="portfolio_img">
+          <img src="./src/assets/images/services/linktree.png"              alt="Exemplar de serviço" id="linktree_img">
+          <img src="./src/assets/images/services/curriculo-digital.png"     class="opened" alt="Exemplar de serviço" id="curriculum_img">
+          <img src="./src/assets/images/services/landing-page.png"          alt="Exemplar de serviço" id="landing_img">
+          <img src="./src/assets/images/services/pagina-de-vendas.png"      alt="Exemplar de serviço" id="sells_img">
+          <img src="./src/assets/images/services/pagina-de-aniversario.png" alt="Exemplar de serviço" id="birth_img">
+          <img src="./src/assets/images/services/pagina-de-evento.png"      alt="Exemplar de serviço" id="event_img">
         </div>
         <p>X</p>
       </div>

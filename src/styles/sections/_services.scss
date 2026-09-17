@@ -118,6 +118,7 @@ section.services {
 
         div.phone {
             img {
+                display: none;
                 height: 75vh;
                 max-height: 800px;
                 transform: translateY(200px);
@@ -144,12 +145,13 @@ section.services {
         }
     }
 
-    div.popup-background.open {
+    div.popup-background.opened {
         pointer-events: all;
         opacity: 1;
 
         div.phone {
-            img {
+            img.opened{
+                display: block;
                 transform: translateY(0);
             }
         }
